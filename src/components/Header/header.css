@@ -43,7 +43,8 @@
   font-family: var(--sans);
   font-size: 15px;
   font-weight: 500;
-  color: var(--bg); /* Uses your #6b6375 / #9ca3af token */
+  /* Uses your #6b6375 / #9ca3af token */
+  color: var(--bg); 
   cursor: pointer;
   position: relative;
   padding: 8px 0;
