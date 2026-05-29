@@ -1,9 +1,8 @@
-
 import './Button.css'; // Ensures the styles are loaded for this component
 
-const Button = ({ text, variant, onClick }) => {
+const Button = ({ text, variant, onClick, style }) => {
   return (
-    <button className={`custom-btn ${variant}`} onClick={onClick}>
+    <button style={style} className={`custom-btn ${variant}`} onClick={onClick}>
       {text}
     </button>
   );

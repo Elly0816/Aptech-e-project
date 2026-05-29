@@ -28,15 +28,15 @@ export const Mon = ({
 
           <div className="timeline">
             <h2>Historical Significance</h2>
-            {historicalSignificance.map((h) => (
-              <div className="timeline-item">
+            {historicalSignificance.map((h, i) => (
+              <div className="timeline-item" key={i}>
                 <p>{h}</p>
               </div>
             ))}
 
             <h2>Facts</h2>
-            {facts.map((f) => (
-              <div className="timeline-item">
+            {facts.map((f, i) => (
+              <div className="timeline-item" key={i}>
                 <p>{f}</p>
               </div>
             ))}

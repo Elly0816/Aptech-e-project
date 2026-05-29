@@ -14,7 +14,7 @@
 .hero-section {
   width: 100%;
   min-height: 70vh;
-  background-image: url('https://cdn.britannica.com/06/122506-050-C8E03A8A/Pyramid-of-Khafre-Giza-Egypt.jpg');
+  /* background-image: url('https://cdn.britannica.com/06/122506-050-C8E03A8A/Pyramid-of-Khafre-Giza-Egypt.jpg'); */
   background-size: cover;
   background-position: center;
   display: flex;
