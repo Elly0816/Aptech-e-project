@@ -1,0 +1,446 @@
+/* =========================================================================
+   COMPLETE HOMEPAGE DESIGN
+   ========================================================================= */
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+/* =========================================================================
+   HERO SECTION (Updated for Left Alignment)
+   ========================================================================= */
+.hero-section {
+  width: 100%;
+  min-height: 70vh;
+  background-image: url('https://cdn.britannica.com/06/122506-050-C8E03A8A/Pyramid-of-Khafre-Giza-Egypt.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Ensures content snaps to the left */
+  padding: 60px 0;
+}
+
+.hero-overlay {
+  width: 100%;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+
+  /* Forces text wrapper children to align left */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--color-brand-300);
+  margin-bottom: 24px;
+  display: inline-block; /* Keeps layout spacing uniform */
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: calc(2rem + 2vw);
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--bg-surface);
+  margin: 0 0 32px 0;
+  max-width: 720px;
+}
+
+.hero-action {
+  align-self: flex-start; /* Ensures button snaps completely to the left */
+}
+/* =========================================================================
+   TRENDING SECTION
+   ========================================================================= */
+.trending-section {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  box-sizing: border-box;
+}
+.trending-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  gap: 24px;
+}
+.trending-header h2 {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+.trending-header p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-secondary);
+  max-width: 580px;
+}
+.monuments-layout-grid {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.main-monument-card {
+  flex: 1.6;
+}
+.card-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-body-content {
+  padding-top: 24px;
+}
+.card-location {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 8px;
+}
+.main-monument-card h3 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+.main-monument-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.card-date-badge {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.text-link-btn {
+  border: none;
+  background: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+/* =========================================================================
+   SIDE CARD (Updated Container and Typographical Contrast)
+   ========================================================================= */
+.side-discovery-card {
+  flex: 1;
+}
+.side-card-inner {
+  /* Provides the card background block container layout */
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 32px;
+  box-sizing: border-box;
+}
+.discovery-label-heading {
+  display: block;
+  margin-bottom: 24px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #4a5568; /* Crisp dark gray slate color */
+}
+.side-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+.side-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.side-card-body {
+  padding-top: 24px;
+  text-align: left;
+}
+.side-card-body h3 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  color: #2d3748; /* Prominent heading color override */
+}
+.side-card-body p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #718096; /* Perfectly balanced body color */
+  margin: 0 0 24px 0;
+}
+.side-card-body .text-link-btn {
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #8c7355; /* Golden brand accent color */
+  padding: 0;
+  cursor: pointer;
+}
+/* =========================================================================
+   EXHIBITION SECTION
+   ========================================================================= */
+.exhibition-section {
+  width: 100%;
+  background-color: var(--color-primary-900);
+  padding: 80px 0;
+}
+.exhibition-container {
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+.exhibition-image-side {
+  flex: 1.2;
+}
+.exhibition-image-side img {
+  width: 100%;
+  object-fit: cover;
+}
+.exhibition-text-side {
+  flex: 1;
+}
+.exhibition-badge {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #cbb281;
+}
+.exhibition-text-side h2 {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 24px;
+}
+.exhibition-intro {
+  color: #a4cbdc;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.exhibition-details {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+/* =========================================================================
+   CHRONOLOGY TIMELINE
+   ========================================================================= */
+.chronology-section {
+  width: 100%;
+  padding: 100px 40px;
+  background-color: var(--bg-page);
+  box-sizing: border-box;
+}
+.chronology-main-title {
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 100px;
+}
+.timeline-vertical-container {
+  position: relative;
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+}
+/* CENTER LINE */
+.timeline-vertical-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: var(--border-default);
+  transform: translateX(-50%);
+}
+/* ROW */
+.timeline-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  align-items: center;
+  margin-bottom: 100px;
+  position: relative;
+}
+.timeline-row:last-child {
+  margin-bottom: 0;
+}
+/* LEFT SIDE */
+.timeline-left {
+  text-align: right;
+  padding-right: 40px;
+}
+/* RIGHT SIDE */
+.timeline-right {
+  text-align: left;
+  padding-left: 40px;
+}
+/* CENTER */
+.timeline-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+/* DOT */
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #8c7355;
+}
+/* YEAR */
+.node-year {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #8c7355;
+  margin-bottom: 10px;
+}
+/* TITLES */
+.timeline-left h4,
+.timeline-right h4 {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+/* DESCRIPTION */
+.timeline-left p,
+.timeline-right p {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 420px;
+}
+/* =========================================================================
+   TABLET
+   ========================================================================= */
+@media (max-width: 1024px) {
+  .chronology-main-title {
+    font-size: 52px;
+  }
+  .timeline-left h4,
+  .timeline-right h4 {
+    font-size: 34px;
+  }
+  .timeline-left p,
+  .timeline-right p {
+    font-size: 16px;
+  }
+}
+/* =========================================================================
+   MOBILE
+   ========================================================================= */
+@media (max-width: 768px) {
+  .hero-content,
+  .trending-section,
+  .exhibition-container,
+  .chronology-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .monuments-layout-grid,
+  .exhibition-container {
+    flex-direction: column;
+  }
+  .chronology-main-title {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+  .timeline-vertical-container::before {
+    left: 20px;
+    transform: none;
+  }
+  .timeline-row {
+    grid-template-columns: 40px 1fr;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+  .timeline-center {
+    grid-column: 1;
+    align-items: flex-start;
+    padding-top: 6px;
+  }
+  .timeline-left,
+  .timeline-right {
+    grid-column: 2;
+    text-align: left;
+    padding: 0;
+  }
+  .timeline-left h4,
+  .timeline-right h4 {
+    font-size: 28px;
+  }
+  .timeline-left p,
+  .timeline-right p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+}
+/* =========================================================================
+   SMALL MOBILE
+   ========================================================================= */
+@media (max-width: 480px) {
+  .chronology-section {
+    padding: 50px 16px;
+  }
+  .chronology-main-title {
+    font-size: 28px;
+  }
+  .timeline-left h4,
+  .timeline-right h4 {
+    font-size: 24px;
+  }
+  .timeline-left p,
+  .timeline-right p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}

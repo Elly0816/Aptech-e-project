@@ -1,0 +1,24 @@
+/* src/components/GalleryHero/GalleryHero.css */
+
+.gallery-hero {
+  margin-bottom: 32px;
+}
+
+.gallery-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 6vw, 58px);
+  font-weight: 300;
+  line-height: 1.05;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.gallery-hero__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line-height);
+  color: var(--text-muted);
+  max-width: 430px;
+  font-weight: 300;
+}

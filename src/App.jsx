@@ -1,14 +1,14 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { BrowserRouter, Route, Routes } from 'react-router';
 import './App.css';
 import './global.css';
 /*  import Header from './components/Header/header';  */
 
-import { HomePage } from './pages/Homepage/HomePage';
+import { About } from './pages/About/About';
 import { Continents } from './pages/Continents/Continents';
 import { Gallery } from './pages/Gallery/Gallery';
-import { Saved } from './pages/Saved/Saved';
-import { About } from './pages/About/About';
+import { HomePage } from './pages/Homepage/HomePage';
 import { Monument } from './pages/Monument/Monument';
+import { Saved } from './pages/Saved/Saved';
 
 const App = () => {
   return (

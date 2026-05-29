@@ -1,0 +1,531 @@
+[{
+  "id": 1,
+  "slug": "pyramids-of-giza",
+  "name": "Pyramids of Giza",
+
+  "zone": "north",
+  "continent": "Africa",
+  "country": "Egypt",
+  "city": "Giza",
+
+  "isWorldWonder": true,
+  "isFeatured": true,
+
+  "yearBuilt": "2589 BCE",
+  "completedYear": "2560 BCE",
+  "builtBy": "Ancient Egyptians",
+  "architecturalStyle": "Ancient Egyptian Architecture",
+
+  "shortDescription": "The Pyramids of Giza are ancient monumental tombs located on the Giza Plateau near Cairo, Egypt.",
+
+  "fullDescription": "The Pyramids of Giza were constructed during the Fourth Dynasty of the Old Kingdom of Ancient Egypt. The complex includes the Great Pyramid of Khufu, the Pyramid of Khafre, and the Pyramid of Menkaure, along with the Great Sphinx. Built as royal tombs, the pyramids are among the most iconic and enduring symbols of ancient civilization and engineering excellence.",
+
+  "historicalSignificance": [
+    "Only surviving wonder of the Ancient World",
+    "UNESCO World Heritage Site",
+    "Symbol of Ancient Egyptian civilization"
+  ],
+
+  "facts": [
+    "The Great Pyramid was the tallest man-made structure for over 3,800 years",
+    "Millions of limestone blocks were used in construction",
+    "The pyramids align closely with the cardinal directions"
+  ],
+
+  "tags": [
+    "unesco",
+    "world wonder",
+    "historical",
+    "egypt",
+    "ancient architecture"
+  ],
+
+  "images":[
+   "https://holeinthedonut.com/wp-content/uploads/2018/01/Egypt-Giza-Pyramids-Pyramid-of-Khufu.jpg",
+   "https://images.immediate.co.uk/production/volatile/sites/7/2019/07/33-GettyImages-154260931-216706f.jpg?quality=90&webp=true&resize=1000,667",
+   "https://www.egypttoursportal.com/images/2017/12/The-Great-Pyramid-Egypt-Tours-Portal-e1514361529725.jpg",
+   "https://media.istockphoto.com/id/1434687699/photo/the-sphinx-by-the-pyramids-of-giza-in-the-desert-of-egypt.jpg?s=1024x1024&w=is&k=20&c=6hSOjHVeFXqo5JIwG924N1DbEKM9Cl_y1pZZJnGDZ1Q=",
+   "https://images.newscientist.com/wp-content/uploads/2023/03/02123011/SEI_146468776.jpg?width=1003"
+  ],
+
+  "location": {
+    "address": "Al Haram, Nazlet El-Semman, Giza Governorate, Egypt",
+    "coordinates": {
+      "latitude": 29.9792,
+      "longitude": 31.1342
+    }
+  },
+
+  "visitingInfo": {
+    "days": "Mondays - Sundays",
+    "openingHours": "07:00 AM",
+    "closingHours": "5:00 PM",
+    "ramadanTime": "08:00 AM - 03:30 PM",
+    "entryFee": {
+      "generalEntry": "EGP 700",
+      "greatPyramidInterior": "EGP 1500"
+    }
+  },
+
+  "ratings": {
+    "average": 4.7,
+    "reviewCount": 9000
+  },
+
+  "theme": {
+    "primaryColor": "#C2A46D",
+    "accentColor": "#E8D3A9"
+
+    
+  },
+
+  "seo": {
+    "metaTitle": "Pyramids of Giza - Global Heritage",
+    "metaDescription": "Discover the mystery and history of the Pyramids of Giza in Egypt."
+  }
+},
+
+  {
+  "id": 2, 
+  "slug": "rock-hewn-churches-lalibela",
+  "name": "Rock-Hewn Churches of Lalibela",
+
+  "zone": "east",
+  "continent": "Africa",
+  "country": "Ethiopia",
+  "city": "Lalibela",
+
+  "isWorldWonder": false,
+  "isFeatured": true,
+
+  "yearBuilt": "1181 AD",
+  "completedYear": "1221 AD",
+  "builtBy": "King Gebre Meskel Lalibela",
+  "architecturalStyle": "Medieval Ethiopian Architecture",
+
+  "shortDescription": "A collection of monolithic rock-cut churches carved directly into stone in Lalibela, Ethiopia.",
+
+  "fullDescription": "The Rock-Hewn Churches of Lalibela are a group of eleven medieval churches carved from solid volcanic rock during the reign of King Lalibela. Built as a symbolic 'New Jerusalem,' the churches remain active places of worship for Ethiopian Orthodox Christians and are celebrated for their remarkable engineering, spiritual importance, and architectural uniqueness.",
+
+  "historicalSignificance": [
+    "The Creation of a 'New Jerusalem'",
+    "Proof of Medieval African Engineering Power",
+    "Survival of the Zagwe Dynasty and Axumite Identity",
+    "An Unbroken, Living Cultural Heritage",
+    "UNESCO World Heritage Site",
+    "Important pilgrimage destination for Ethiopian Orthodox Christians",
+    "Outstanding example of rock-cut architecture"
+  ],
+
+  "facts": [
+    "The churches were carved downward into solid rock",
+    "Bet Giyorgis is the most famous church in the complex",
+    "The site is still used for religious ceremonies today"
+  ],
+
+  "tags": [
+    "unesco",
+    "historical",
+    "ethiopia",
+    "religious",
+    "architecture"
+  ],
+
+  "images": [
+    "https://dynamic-media.tacdn.com/media/photo-o/2f/19/94/88/caption.jpg?w=1100&h=800&s=1",
+    "https://dynamic-media.tacdn.com/media/photo-o/2f/19/94/88/caption.jpg?w=1100&h=800&s=1",
+    "https://dynamic-media.tacdn.com/media/photo-o/2f/19/67/d5/caption.jpg?w=1100&h=800&s=1",
+    "https://dynamic-media.tacdn.com/media/photo-o/2f/19/78/ee/caption.jpg?w=1100&h=800&s=1",
+    "https://suzannelovellinc.com/wp-content/uploads/2020/04/bigstock-Unique-monolithic-rock-hewn-Ch-77030435.jpg"
+    
+  ],
+
+  "location": {
+    "address": "Lalibela, Amhara Region, Ethiopia",
+    "coordinates": {
+      "latitude": 12.0325,
+      "longitude": 39.0433
+    }
+  },
+
+  "visitingInfo": {
+    "openingHours": "8:00 AM",
+    "lunchbreak": "12:00 PM - 2:00 PM",
+    "closingHours": "5:30 PM",
+    "closedDays": [],
+    "entryFee": {
+      "local": "ETB 200",
+      "foreign": "USD 100"
+    }
+  },
+
+  "ratings": {
+    "average": 4.8,
+    "reviewCount": 38421
+  },
+
+  "theme": {
+    "primaryColor": "#8B5E3C",
+    "accentColor": "#D8C3A5"
+  },
+
+  "seo": {
+    "metaTitle": "Rock-Hewn Churches of Lalibela - Global Heritage",
+    "metaDescription": "Explore the ancient rock-hewn churches of Lalibela, Ethiopia."
+  }
+},
+
+  {
+  "id":3,
+  "slug": "great-zimbabwe",
+  "name": "Great Zimbabwe",
+
+  "zone": "south",
+  "continent": "Africa",
+  "country": "Zimbabwe",
+  "city": "Masvingo",
+
+  "isWorldWonder": false,
+  "isFeatured": true,
+
+  "yearBuilt": "1100",
+  "completedYear": "1450",
+  "builtBy": "Shona people",
+  "architecturalStyle": "Dry Stone Architecture",
+
+  "shortDescription": "An ancient stone city and cultural monument located in southeastern Zimbabwe.",
+
+  "fullDescription": "Great Zimbabwe was the capital of the Kingdom of Zimbabwe during the Late Iron Age and is the largest ancient stone structure in sub-Saharan Africa. Built by the ancestors of the Shona people, the site served as a political, economic, and religious center and became a symbol of African civilization, trade, and architectural achievement.",
+
+  "historicalSignificance": [
+    "proof of advanced pre-colonial civilization",
+    "A core hub of medieval global trade",
+    "A catalyst for modern Afican nationalism",
+    "UNESCO World Heritage Site",
+    "Largest ancient stone ruins in sub-Saharan Africa",
+    "National symbol of Zimbabwe"
+  ],
+
+  "facts": [
+    "The walls were built without mortar",
+    "walls taper and lean inward as they get higher to shift the centre of gravity and prevent collapse",
+    "they are zero 90-degrees corners; all walls flow in sweeping, organic curves",
+    "The Great Enclosure is one of the site's most famous structures",
+    "The country of Zimbabwe was named after the monument"
+  ],
+
+  "tags": [
+    "unesco",
+    "historical",
+    "africa",
+    "zimbabwe",
+    "architecture"
+  ],
+
+  "images": [
+     "https://t4.ftcdn.net/jpg/06/36/05/59/240_F_636055988_1S4mvijRgF9CymKYi00tWDE15C9Vr8GL.jpg",
+     "https://t4.ftcdn.net/jpg/06/20/25/09/240_F_620250997_A7TMsDFefu51KZQUR5kWgUIxtqbcgtIz.jpg",
+     "https://cdn.thestandard.co.zw/images/thestandard/uploads/2022/10/DWJgK9cIgX54yIf2a4qf4HLNwMSQT7YwbBJd3UZW.jpg",
+     "https://images.ctfassets.net/159p56s120vn/OBNd0lPtCWX0jzM16ZrpN/1d98d8197863d16831248c14e72e7e20/Great_Enclosure_ruins_UNESCO_Site_in_Great_Zimbabwe.jpg",
+     "https://images.ctfassets.net/159p56s120vn/39748ibIMYWuiz81Y0jvIv/624cbbb794e7262e459c5782eab282f5/Hill_Complex_ruins_UNESCO_Site_in_Great_Zimbabwe.jpg"
+    
+  ],
+
+  "location": {
+    "address": "Great Zimbabwe National Monument, Masvingo Province, Zimbabwe",
+    "coordinates": {
+      "latitude": -20.2675,
+      "longitude": 30.9333
+    }
+  },
+
+  "visitingInfo": {
+    "openingHours": "6:00 AM",
+    "closingHours": "6:00 PM",
+
+    "entryFeeForLocals": {
+      "children": "USD 3",
+      "adults": "USD 10"
+    },
+    "entryFeeForForeigners":{
+      "chuldren": "USD 8",
+      "adults": "USD 15"
+    }
+  },
+
+  "ratings": {
+    "average": 4.7,
+    "reviewCount": 18642
+  },
+
+  "theme": {
+    "primaryColor": "#7B5B3A",
+    "accentColor": "#CBB89D"
+  },
+
+  "seo": {
+    "metaTitle": "Great Zimbabwe - Global Heritage",
+    "metaDescription": "Discover the ancient stone city of Great Zimbabwe and its rich African history."
+  }
+},
+
+{
+  "id": 4,
+  "slug": "obelisks-of-aksum",
+  "name": "Obelisks of Aksum",
+
+  "zone": "east",
+  "continent": "Africa",
+  "country": "Ethiopia",
+  "city": "Aksum",
+
+  "isWorldWonder": false,
+  "isFeatured": true,
+
+  "yearBuilt": "300",
+  "completedYear": "400",
+  "builtBy": "Kingdom of Aksum",
+  "architecturalStyle": "Ancient Aksumite Architecture",
+
+  "shortDescription": "A collection of ancient granite stelae and obelisks located in the historic city of Aksum, Ethiopia.",
+
+  "fullDescription": "The Obelisks of Aksum are monumental stone stelae erected by the ancient Kingdom of Aksum to mark royal burial sites and demonstrate the empire’s power and engineering skill. Carved from single pieces of granite, the obelisks are among the most significant archaeological remains of ancient Africa and symbolize the cultural and historical legacy of the Aksumite civilization.",
+
+  "historicalSignificance": [
+    "Proof of the Aksum engineering prowess",
+    "A modern symbol of cultural restitution",
+    "A triumph for cultural justice",
+    "UNESCO World Heritage Site",
+    "Symbol of the ancient Kingdom of Aksum",
+    "Important archaeological and religious heritage site"
+  ],
+
+  "facts": [
+    "The tallest fallen obelisk measures over 33 meters and weighs up to 500 tons",
+    "The Obelisk of Aksum was returned to Ethiopia from Italy in 2005",
+    "The monuments were carved from single blocks of granite",
+    "The columns are meticulously carved to look like multi-story skyscrapers, featuring realistic false doors, frames, handles, locks, and rows of windows.",
+    "the obelisks are actually massive tombstones built to mark the subterranean burial grounds of Aksum’s royal family."
+  ],
+
+  "tags": [
+    "unesco",
+    "historical",
+    "ethiopia",
+    "africa",
+    "monument"
+  ],
+
+  "images": [
+  "https://img.atlasobscura.com/mq0bPYQ9Hip9adKQMvLB_64XCrkh9g8SJ5scj8iLS-I/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9mNTE1/ZjA0ZDIxNThkOTFl/ZTBfODAwcHgtQXh1/bV9ub3J0aGVybl9z/dGVsZWFfcGFyay5q/cGc.webp",
+  "https://img.atlasobscura.com/UT_RLiXZOyM7iwrFjydpP8ASckVQkdlfh201M43Ka34/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82NGJm/YmE1Mzk0ZDAwNzM0/MzBfMTAyNHB4LVJv/bWVfU3RlbGUuanBn.webp",
+  "https://img.atlasobscura.com/Ml58A9LE8LDrxTKMVCnqhGWvQ2SX5vLMtWmOgp8NVxM/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZjNj/ZDQ1OGI1MWE3YTgx/ZmRfODAwcHgtT2Jl/bGlza19vZl9Ba3N1/bV9SZW1haW5zMi5q/cGc.webp",
+  "https://img.atlasobscura.com/KWlO7bW98_fRzlr_HjRG18D1IBODQwx9AffUJcDu17I/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZjNj/ZDQ1OGI1MWE3YTgx/ZmRfMTI4MHB4LU9i/ZWxpc2tfb2ZfQWtz/dW1fUmVtYWluczQu/anBn.webp",
+  "https://madainproject.com/content/media/collect/aksum_obelisk_2788.jpg"
+  ],
+
+  "location": {
+    "address": "Aksum, Tigray Region, Ethiopia",
+    "coordinates": {
+      "latitude": 14.1319,
+      "longitude": 38.7245
+    }
+  },
+
+  "visitingInfo": {
+    "openingHours": "8:00 AM",
+    "closingHours": "6:00 PM",
+    "entryFee": {
+      "local": "ETB 100",
+      "foreign": "USD 20"
+    }
+  },
+
+  "ratings": {
+    "average": 4.7,
+    "reviewCount": 12457
+  },
+
+  "theme": {
+    "primaryColor": "#8A6A4A",
+    "accentColor": "#D9C7A4"
+  },
+
+  "seo": {
+    "metaTitle": "Obelisks of Aksum - Global Heritage",
+    "metaDescription": "Explore the ancient Obelisks of Aksum and the legacy of the Aksumite Kingdom."
+  }
+},
+{
+  "id": 5 ,
+  "slug": "leptis-magna",
+  "name": "Leptis Magna",
+
+  "zone": "north",
+  "continent": "Africa",
+  "country": "Libya",
+  "city": "Al Khums",
+
+  "isWorldWonder": false,
+  "isFeatured": true,
+
+  "yearBuilt": "700 BC",
+  "completedYear": "200 AD",
+  "builtBy": "Phoenicians and Romans",
+  "architecturalStyle": "Roman Classical Architecture",
+
+  "shortDescription": "An ancient Roman city located on the Mediterranean coast of modern-day Libya.",
+
+  "fullDescription": "Leptis Magna was one of the most prosperous and influential cities of the Roman Empire in North Africa. Originally founded by the Phoenicians, the city flourished under Roman rule, especially during the reign of Emperor Septimius Severus, who was born there. Known for its remarkably preserved ruins, Leptis Magna showcases grand amphitheaters, basilicas, markets, and triumphal arches that reflect the wealth and sophistication of ancient Roman urban planning.",
+
+  "historicalSignificance": [
+    "UNESCO World Heritage Site",
+    "One of the best-preserved Roman cities in the Mediterranean",
+    "Birthplace of Emperor Septimius Severus"
+  ],
+
+  "facts": [
+    "The city contains a massive Roman amphitheater near the sea",
+    "Leptis Magna was an important trade hub in the Roman Empire",
+    "Its ruins remained buried by sand for centuries, helping preserve them"
+  ],
+
+  "tags": [
+    "unesco",
+    "historical",
+    "roman empire",
+    "libya",
+    "architecture"
+  ],
+
+  "images": [
+   "https://www.historyhit.com/app/uploads/bis-images/5198643/Leptis-Magna-750px-1576x1074.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Leptis_Magna_-_Marktgeb%C3%A4ude_%28macellum%29.jpg/1920px-Leptis_Magna_-_Marktgeb%C3%A4ude_%28macellum%29.jpg?_=20101128153952",
+    "https://www.jamesmerriman.co.uk/_next/image?url=https%3A%2F%2Fimagedelivery.net%2FlLmNeOP7HXG0OqaG97wimw%2F6951f41a-a32f-434d-9ebf-9de0b1b81893%2Fe4ebe8d2-74c4-442c-81a5-a3f03a179b27.jpg%2Fpublic&w=1024&q=75",
+    "https://www.embassyoflibyadc.org/assets/frontend/img/LeptisMagna.png",
+    "https://www.aljazeera.com/wp-content/uploads/2021/09/000_9NF7TM.jpg"
+    
+   
+],
+
+  "location": {
+    "address": "Leptis Magna Archaeological Site, Al Khums, Libya",
+    "coordinates": {
+      "latitude": 32.6396,
+      "longitude": 14.2906
+    }
+  },
+
+  "visitingInfo": {
+    "openingHours": "8:00 AM",
+    "closingHours": "5:00 PM",
+    "entryFee": {
+      "local": "LYD 10",
+      "foreign": "LYD 25"
+    }
+  },
+
+  "ratings": {
+    "average": 4.8,
+    "reviewCount": 9675
+  },
+
+  "theme": {
+    "primaryColor": "#B58B57",
+    "accentColor": "#E2D1B3"
+  },
+
+  "seo": {
+    "metaTitle": "Leptis Magna - Global Heritage",
+    "metaDescription": "Discover the ancient Roman city of Leptis Magna and its extraordinary ruins in Libya."
+  }
+},
+
+{
+  "id": 6 ,
+  "slug": "mount-kilimanjaro",
+  "name": "Mount Kilimanjaro",
+
+  "zone": "east",
+  "continent": "Africa",
+  "country": "Tanzania",
+  "city": "Moshi",
+
+  "isWorldWonder": false,
+  "isFeatured": true,
+
+  "yearBuilt": "Unknown",
+  "completedYear": "Unknown",
+  "builtBy": "Natural Formation",
+  "architecturalStyle": "Volcanic Mountain Landscape",
+
+  "shortDescription": "The highest mountain in Africa and the world’s tallest free-standing mountain, located in Tanzania.",
+
+  "fullDescription": "Mount Kilimanjaro is a dormant volcanic mountain in northeastern Tanzania and one of Africa’s most iconic natural landmarks. Rising to 5,895 meters above sea level, it attracts climbers and adventurers from around the world. The mountain features diverse ecosystems ranging from rainforest to alpine desert and glaciers, making it one of the most unique trekking destinations on Earth.",
+
+  "historicalSignificance": [
+    "UNESCO World Heritage Site",
+    "Highest mountain in Africa",
+    "Major symbol of Tanzania and African natural heritage"
+  ],
+
+  "facts": [
+    "Kilimanjaro consists of three volcanic cones: Kibo, Mawenzi, and Shira",
+    "It is one of the Seven Summits of the world",
+    "Its glaciers have been shrinking due to climate change"
+  ],
+
+  "tags": [
+    "unesco",
+    "mountain",
+    "nature",
+    "tanzania",
+    "adventure"
+  ],
+
+  "images": [
+     "https://journeysbydesign.com/wp-content/uploads/2017/02/Mt_Kilimanjaro_Africa-1.jpg",
+     "https://journeysbydesign.com/wp-content/uploads/2017/02/KilimanjaroviewonthewaytoKibo-camp.jpg",
+     "https://www.climbing-kilimanjaro.com/wp-content/uploads/2020/11/Mount-Kilimanjaro-Meaning-1024x704.jpg",
+     "https://kilidovetours.com/wp-content/uploads/2025/05/Monut-Kilimanjaro-Green-Season-view.webp",
+     "https://www.explore.com/img/gallery/mount-kilimanjaro-the-complete-guide-to-hiking-the-famous-mountain/intro-1676676464.webp"
+
+  ],
+
+  "location": {
+    "address": "Kilimanjaro National Park, Tanzania",
+    "coordinates": {
+      "latitude": -3.0674,
+      "longitude": 37.3556
+    }
+  },
+
+  "visitingInfo": {
+    "openingHours": "Open 24 Hours",
+    "closingHours": "Open 24 Hours",
+    "entryFee": {
+      "local": "TZS 10000",
+      "foreign": "USD 70 per day"
+    }
+  },
+
+  "ratings": {
+    "average": 4.9,
+    "reviewCount": 96314
+  },
+
+  "theme": {
+    "primaryColor": "#5E7A4D",
+    "accentColor": "#DDE6D5"
+  },
+
+  "seo": {
+    "metaTitle": "Mount Kilimanjaro - Global Heritage",
+    "metaDescription": "Discover Mount Kilimanjaro, Africa’s tallest mountain and one of the world’s greatest trekking destinations."
+  }
+
+}]
+
+
+
+

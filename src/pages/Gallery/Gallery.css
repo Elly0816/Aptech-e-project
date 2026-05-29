@@ -1,0 +1,75 @@
+/* src/pages/Gallery/Gallery.css */
+
+.gallery-page {
+  background: var(--bg-page);
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+.gallery-page__content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ── CTA section ── */
+.gallery-cta {
+  background: var(--color-primary-900);
+  color: var(--text-inverse);
+  padding: 58px 40px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.gallery-cta__title {
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 300;
+  margin-bottom: 14px;
+  letter-spacing: 0.01em;
+}
+
+.gallery-cta__text {
+  font-family: var(--font-body);
+  font-size: var(--text-small-size);
+  opacity: 0.62;
+  line-height: 1.9;
+  max-width: 360px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* ── Grid card entrance animation ── */
+@keyframes wg-slide-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.wg-grid-item {
+  opacity: 0;
+  animation: wg-slide-in 0.5s ease forwards;
+}
+
+.wg-grid-item:nth-child(1) { animation-delay: 0.00s; }
+.wg-grid-item:nth-child(2) { animation-delay: 0.06s; }
+.wg-grid-item:nth-child(3) { animation-delay: 0.12s; }
+.wg-grid-item:nth-child(4) { animation-delay: 0.18s; }
+.wg-grid-item:nth-child(5) { animation-delay: 0.24s; }
+.wg-grid-item:nth-child(6) { animation-delay: 0.30s; }
+
+/* ── Lightbox animations ── */
+@keyframes wg-lb-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes wg-img-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1);    }
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .gallery-page__content { padding: 28px 16px 60px; }
+  .gallery-cta           { padding: 44px 20px;      }
+}

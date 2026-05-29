@@ -1,0 +1,33 @@
+/* src/components/GalleryFilter/GalleryFilter.css */
+
+.gallery-filter {
+  border-bottom: 1px solid var(--border-default);
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.gallery-filter__tab {
+  font-family: var(--font-body);
+  font-size: var(--text-caption-size);
+  letter-spacing: 0.08em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  opacity: 0.45;
+  font-weight: 400;
+  padding: 8px 0 10px;
+  border-bottom: 1.5px solid transparent;
+  margin-right: 28px;
+  transition: all 0.25s;
+}
+
+.gallery-filter__tab:hover {
+  opacity: 0.75;
+}
+
+.gallery-filter__tab.active {
+  opacity: 1;
+  font-weight: 600;
+  border-bottom-color: var(--text-primary);
+}

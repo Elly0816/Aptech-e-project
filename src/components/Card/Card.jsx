@@ -1,18 +1,30 @@
+import { NavLink } from 'react-router';
 import './Card.css';
 
-const Card = ({ name, country, city, images }) => {
-  return (
-    <div className="card">
-      <img src={images[3]} alt={name} />
+export const Card = ({ id = '', name, country, city, images = [] }) => {
+  const img = images?.[0] ?? images?.[3] ?? '';
 
-      <h4>GH-0412</h4>
-      <h1>{name}</h1>
-      <h4>
-        📍{country}, {city}{' '}
-      </h4>
-      <h3>VIEW FULL RECORD</h3>
-    </div>
+  return (
+    <article className="card">
+      <div className="card-media">{img ? <img src={img} alt={name} /> : <div className="card-placeholder" />}</div>
+
+      <div className="card-body">
+        <div className="card-meta">
+          <span className="card-code">{id}</span>
+        </div>
+
+        <h3 className="card-title">{name}</h3>
+
+        <div className="card-location">
+          📍 {city}, {country}
+        </div>
+
+        <div className="card-cta">
+          <NavLink to={`/monument/${id}`} style={{ textDecoration: 'none', color: '#ee2242' }}>
+            VIEW FULL RECORD
+          </NavLink>
+        </div>
+      </div>
+    </article>
   );
 };
-
-export default Card;

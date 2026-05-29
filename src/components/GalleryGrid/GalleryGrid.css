@@ -1,0 +1,26 @@
+/* src/components/GalleryGrid/GalleryGrid.css */
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gallery-grid__row {
+  display: grid;
+  gap: 8px;
+  /* grid-template-columns and height are set dynamically in JSX
+     because they depend on the row index (alternating 2:1 / 1:2) */
+}
+
+/* ── Mobile: collapse to single column ── */
+@media (max-width: 700px) {
+  .gallery-grid__row {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+  }
+
+  .gallery-grid__row .wg-grid-item {
+    height: 210px;
+  }
+}

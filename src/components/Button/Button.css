@@ -1,0 +1,63 @@
+/* =========================================================================
+   EXACT REUSABLE BUTTON SYSTEM - GLOBAL OVERRIDE MATCHED TO IMAGE
+   ========================================================================= */
+
+.custom-btn {
+  font-family: var(--font-body), sans-serif;
+  font-size: 11px;            
+  font-weight: 700;
+  letter-spacing: 0.18em;     
+  padding: 14px 36px;         
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  
+  /* --- CRITICAL FIXES FOR UNIFORM LAYOUT --- */
+  display: inline-flex;       
+  align-items: center;        
+  justify-content: center;    
+  line-height: 1 !important;  
+  white-space: nowrap !important; 
+  
+  /* --- KILL HIGH-CONTRAST BROWSER BORDERS --- */
+  -webkit-appearance: none;    /* Strips default Safari/Chrome element handling */
+  appearance: none;            /* Strips modern browser default buttons styles */
+  outline: none !important;
+  border: 0px solid transparent !important; /* Forces the border layout to completely collapse */
+  border-radius: 0px !important;            /* Eliminates curved corners */
+  box-sizing: border-box;
+}
+
+/* --- VARIANT 1: SOLID NAVY (Matches Image 2 perfectly, no outline) --- */
+.btn-solid {
+  background-color: #0d1420 !important; /* Premium flat dark color block */
+  color: #ffffff !important;            /* Clean white text */
+  border: none !important;              /* Double safety net to ensure no lines display */
+  box-shadow: none !important;          /* Strips hidden focus-rings or shadow rings */
+}
+
+.btn-solid:hover {
+  background-color: #162133 !important; /* Soft dark transition hover state */
+}
+
+/* --- VARIANT 2: OUTLINE WHITE --- */
+.btn-outline {
+  background-color: transparent !important; 
+  color: #ffffff !important;            
+  border: 1px solid #ffffff !important; 
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important; 
+}
+
+/* --- VARIANT 3: OUTLINE DARK --- */
+.btn-dark-outline {
+  background-color: transparent !important;
+  color: #0d1420 !important;
+  border: 1px solid #0d1420 !important;
+}
+
+.btn-dark-outline:hover {
+  background-color: rgba(13, 20, 32, 0.05) !important;
+}

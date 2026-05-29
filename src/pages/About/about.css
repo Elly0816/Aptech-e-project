@@ -1,0 +1,316 @@
+/* ========== PAGE BACKGROUND ========== */
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #e8a96b 0%,
+    #c4956a 45%,
+    #8b7355 100%
+  );
+  padding-bottom: 4rem;
+  overflow-x: hidden;
+}
+
+/* ========== QUOTE SECTION ========== */
+.quote-wrapper {
+  padding: 3rem 6%;
+}
+
+.quote-section {
+  border-left: 4px solid #5a4a3a;
+  padding-left: 1.5rem;
+  max-width: 850px;
+}
+
+.quote {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
+  font-style: italic;
+  color: #3d3226;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  text-align: top;
+}
+
+.author {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #5a4a3a;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+/* ========== CONTACT + FEEDBACK SECTION ========== */
+.contact-feedback-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 0 6%;
+  align-items: stretch;
+}
+
+/* ========== CARD STYLES ========== */
+.feedback-card,
+.contact-card {
+  background: #fdfdfd;
+  padding: 2.8rem;
+  min-height: 620px;
+  
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ========== TITLES ========== */
+.card-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw, 3.3rem);
+  font-weight: 500;
+  color: #0f172a;
+  margin-bottom: 0.6rem;
+  line-height: 1.1;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #8b6914;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+}
+
+/* ========== FORM STYLES ========== */
+.form-group {
+  margin-bottom: 1.6rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.7rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 0.75rem 0;
+  font-size: 0.95rem;
+  color: #333;
+  background: transparent;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #b8b8b8;
+}
+
+.form-select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.form-textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #8b6914;
+}
+
+/* ========== BUTTONS ========== */
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.card-button {
+  border: none;
+  padding: 0.95rem 2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.feedback-button {
+  background: #08132b;
+  color: #fff;
+}
+
+.contact-button {
+  background: #9f4d3a;
+  color: #fff;
+}
+
+.card-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* ========== SPOTLIGHT SECTION ========== */
+.spotlight-section {
+  position: relative;
+  margin: 3rem 6% 0;
+  overflow: hidden;
+}
+
+.spotlight-image {
+  width: 100%;
+  height: 500%;
+  object-fit: cover;
+  display: flex;
+}
+
+.spotlight-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.15) 45%,
+    transparent 100%
+  );
+  padding: 2.5rem;
+}
+
+.spotlight-content {
+  max-width: 700px;
+}
+
+.spotlight-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.7rem;
+}
+
+.spotlight-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: #fff;
+  margin: 0;
+}
+
+/* ========== TABLET RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .contact-feedback-container {
+    grid-template-columns: 1fr;
+  }
+
+  .feedback-card,
+  .contact-card {
+    min-height: auto;
+  }
+
+  .spotlight-image {
+    height: 420px;
+  }
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .quote-wrapper {
+    padding: 2rem 1.2rem;
+  }
+
+  .quote-section {
+    padding-left: 1rem;
+  }
+
+  .contact-feedback-container {
+    padding: 0 1.2rem;
+    gap: 1.2rem;
+  }
+
+  .feedback-card,
+  .contact-card {
+    padding: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 4rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .button-wrapper {
+    justify-content: center;
+  }
+
+  .card-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .spotlight-section {
+    margin: 2rem 1.2rem 0;
+  }
+
+  .spotlight-image {
+    height: 320px;
+  }
+
+  .spotlight-overlay {
+    padding: 1.5rem;
+  }
+
+  .spotlight-title {
+    font-size: 2rem;
+  }
+}
+
+/* ========== SMALL MOBILE ========== */
+@media (max-width: 480px) {
+  .quote {
+    font-size: 1.15rem;
+  }
+
+  .card-title {
+    font-size: 1.7rem;
+  }
+
+  .spotlight-image {
+    height: 250px;
+  }
+
+  .spotlight-title {
+    font-size: 1.6rem;
+  }
+}

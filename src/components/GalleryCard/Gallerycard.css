@@ -1,0 +1,116 @@
+/* src/components/GalleryCard/GalleryCard.css */
+
+.gallery-card {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  background: var(--bg-muted);
+  height: 100%;
+}
+
+.gallery-card__figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-card:hover .gallery-card__img {
+  transform: scale(1.06);
+}
+
+/* Always-visible category badge top-left */
+.gallery-card__label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: var(--font-body);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(6px);
+  padding: 3px 8px;
+  text-transform: uppercase;
+}
+
+/* Gradient overlay — always visible, darkens on hover */
+.gallery-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.08) 55%,
+    transparent 100%
+  );
+  padding: 18px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: background 0.35s;
+}
+
+.gallery-card:hover .gallery-card__overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.18) 55%,
+    transparent 100%
+  );
+}
+
+.gallery-card__location {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.07em;
+  margin-bottom: 3px;
+  font-style: normal; /* override <address> italics */
+}
+
+.gallery-card__name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* "View Chapter" button — slides up on hover */
+.gallery-card__btn {
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  background: transparent;
+  padding: 5px 12px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s, transform 0.3s, background 0.2s, color 0.2s,
+    border-color 0.2s;
+}
+
+.gallery-card:hover .gallery-card__btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-card__btn:hover {
+  background: #fff;
+  color: var(--text-primary);
+  border-color: #fff;
+}

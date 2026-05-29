@@ -1,35 +1,156 @@
 .filters {
-  width: 20%;
-  padding: 20px;
-  border-right: 1px solid #ddd;
+  width: 240px;
+  padding: 18px;
+  border-right: 1px solid #e6e0da;
   height: 100vh;
+  box-sizing: border-box;
+  background: #fff7f0;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial;
+  color: #222;
 }
 
-.filters input[type="text"] {
+.filters h2 {
+  margin: 0 0 12px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.filters input[type='text'] {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 8px 0 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  background: #fff;
 }
 
-/* .stright {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-} */
-
-.stright label {
+/* dropdown layout */
+.dropdown {
+  border-bottom: 1px solid #efe6df;
+  margin-bottom: 6px;
+  position: relative;
   display: block;
-  margin-bottom: 12px;
 }
 
-.stright{
-  border-bottom: 1PX rgb(205, 201, 201) solid;
+/* toggle (uses button element) */
+.dropdown-toggle {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 10px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-.btn{
-  margin-top: 20px;
-  width: 240px;
-  padding: 15px;
-  background-color: transparent;
-  border: 0.5px black solid;
+.dropdown-toggle h3 {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* caret via pseudo element */
+.dropdown-toggle::after {
+  content: '▾';
+  font-size: 14px;
+  color: #333;
+  transition: transform 180ms ease;
+  margin-left: 8px;
+}
+
+/* menu hidden by max-height for smooth animation */
+.dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 220ms ease,
+    padding 180ms ease;
+  background: transparent;
+  padding: 0 6px;
+  /* internal scroll when opened */
+  overflow-y: auto;
+}
+
+/* when active, reveal menu */
+.dropdown.active .dropdown-menu {
+  max-height: 220px; /* adjust to taste */
+  padding: 8px 6px 12px 6px;
+}
+
+/* rotate caret when active */
+.dropdown.active .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* labels & items */
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #222;
+}
+
+.filter-label input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  accent-color: #1f6feb;
+  flex-shrink: 0;
+}
+
+.filter-text {
+  line-height: 1;
+  display: inline-block;
+  word-break: break-word;
+}
+
+/* change label appearance when checked */
+.filter-label input[type='checkbox']:checked + .filter-text {
+  color: #1f6feb;
+  font-weight: 600;
+}
+
+/* hover state */
+.filter-label:hover {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+}
+
+/* Clear button */
+.clear-btn {
+  margin-top: 14px;
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #222;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  font-size: 13px;
+}
+
+/* scrollbar (small refinement) */
+.dropdown-menu::-webkit-scrollbar {
+  width: 8px;
+}
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
 }

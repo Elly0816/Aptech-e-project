@@ -1,4 +1,11 @@
+/* ==========================================================================
+   GLOBAL HERITAGE FOOTER MASTER STYLES (LIGHT THEME FORCED)
+   ========================================================================== */
+
 .footer {
+  /* Forces your project's light ivory surface color and overrides system dark mode */
+  background-color: var(--bg-surface, #fff8f3) !important;
+  border-top: 1px solid var(--border-default, #f2e7dd) !important;
   width: 100%;
   background-color: var(--bg-footer);
   border-top: 1px solid var(--border-default);
@@ -10,10 +17,13 @@
 }
 
 .footer-container {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
+  background-color: var(--bg-surface, #fff8f3) !important;
+  padding: 64px 48px 32px 48px;
+  font-family: var(--font-body), 'Inter', sans-serif;
+  color: var(--text-secondary, #2d3d45) !important;
+  text-align: left;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-main {
@@ -162,30 +172,23 @@
   gap: 40px;
 }
 
-/* Brand Section Styling (Left Panel) */
 .footer-brand-section {
   flex: 1;
-  max-width: 440px;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
+  min-width: 280px;
+  max-width: 450px;
 }
 
 .footer-logo {
-  font-family: var(--font-heading); /* Playfair Display */
-  font-size: var(--text-heading-md-size);
-  line-height: var(--text-heading-md-line-height);
-  font-weight: 500;
-  color: var(--text-primary) !important;
+  font-family: var(--font-heading), 'Playfair Display', serif;
+  font-size: 28px;
+  color: var(--text-primary, #121a28) !important;
   margin: 0 0 16px 0;
 }
 
 .footer-description {
-  font-family: var(--font-body); /* Inter */
-  font-size: var(--text-small-size);
-  line-height: var(--text-small-line-height);
-  color: var(--text-secondary) !important;
-  margin: 0 0 24px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary, #2d3d45) !important;
 }
 
 .footer-icons {
@@ -209,7 +212,7 @@
 .footer-column {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  min-width: 160px;
 }
 
 .footer-column h4 {
@@ -220,16 +223,13 @@
   letter-spacing: 1.4px;
   color: var(--text-dark) !important;
   margin: 0 0 20px 0;
-  white-space: nowrap; /* Keeps DISCOVER and ORGANIZATION perfectly whole */
+  white-space: nowrap; /* Stops DISCOVER and ORGANIZATION from breaking down mid-word */
 }
 
 .footer-column ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
 }
 
 .footer-column ul li a {
@@ -240,20 +240,18 @@
   white-space: nowrap;
 }
 
-/* Bottom Row Tagline Element */
 .footer-bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-default, #f2e7dd);
   display: flex;
   justify-content: flex-end;
-  width: 100%;
-  border-top: 1px solid var(--border-default);
-  padding-top: 24px;
 }
 
 .footer-tagline {
-  font-family: var(--font-body);
-  font-size: var(--text-caption-size);
-  color: var(--text-muted) !important;
+  font-size: 12px;
   font-style: italic;
+  color: var(--text-muted, #906d54) !important;
 }
 
 /* =========================================================================
@@ -299,21 +297,32 @@
 }
 
 @media (max-width: 768px) {
+  /* Padding adjustments to ensure content doesn't get hidden under the floating bar */
+  .footer-container {
+    padding: 48px 24px 100px 24px;
+  }
+
+  .footer-links-section {
+    gap: 32px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Fixed Floating Dock Layout */
   .mobile-bottom-nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 68px;
-    z-index: 9999;
-    background-color: var(--bg-surface);
-    border-top: 1px solid var(--border-default);
+    right: 0;
+    height: 64px;
+    background-color: var(--bg-surface, #fff8f3) !important;
+    border-top: 1px solid var(--border-default, #f2e7dd);
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
-    padding-bottom: env(safe-area-inset-bottom);
-    box-sizing: border-box;
+    padding-bottom: env(safe-area-inset-bottom); /* Safety margin for modern phone screens */
   }
 
   .mobile-nav-item {
@@ -321,30 +330,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    font-size: 11px;
+    font-family: var(--font-body), sans-serif;
+    color: var(--text-muted, #906d54);
     cursor: pointer;
+    gap: 4px;
     flex: 1;
-    height: 100%;
-    color: var(--text-secondary);
+    transition: color 0.2s ease;
   }
 
   .mobile-nav-icon {
     width: 22px;
     height: 22px;
-    opacity: 0.8;
+    stroke: var(--text-muted, #906d54);
+    transition:
+      stroke 0.2s ease,
+      transform 0.2s ease;
   }
 
-  .mobile-nav-item span {
-    font-family: var(--font-body);
-    font-size: 11px;
-    font-weight: 500;
-  }
-
+  /* Active Menu Item States */
   .mobile-nav-item.active {
     color: var(--text-muted) !important;
   }
 
   .mobile-nav-item.active .mobile-nav-icon {
-    opacity: 1;
+    stroke: var(--color-primary-500, #134c66) !important;
+    transform: translateY(-2px);
   }
 }

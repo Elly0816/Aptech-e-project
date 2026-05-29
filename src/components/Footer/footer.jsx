@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import './Footer.css';
 import { useLocation } from 'react-router';
+import './Footer.css';
 
 const Footer = () => {
   const [activeTab, setActiveTab] = useState('Explore');
@@ -122,7 +122,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* NEW: Mobile App-Style Bottom Navigation Bar */}
+      {/* Mobile App-Style Bottom Navigation Bar */}
       <div className="mobile-bottom-nav">
         <div
           className={`mobile-nav-item ${activeTab === 'Explore' ? 'active' : ''}`}
