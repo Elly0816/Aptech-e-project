@@ -1838,5 +1838,702 @@
       "metaTitle": "Cueva de las Manos - Global Heritage",
       "metaDescription": "Discover Cueva de las Manos, Argentina’s prehistoric cave art site famous for its ancient hand paintings."
     }
+  },
+  {
+    "id": 24,
+    "slug": "colosseum",
+    "name": "Colosseum",
+
+    "zone": "south",
+    "continent": "Europe",
+    "country": "Italy",
+    "city": "Rome",
+
+    "isWorldWonder": true,
+    "isFeatured": true,
+
+    "yearBuilt": "72",
+    "completedYear": "80",
+    "builtBy": "Emperor Vespasian and Emperor Titus",
+    "architecturalStyle": "Ancient Roman Architecture",
+
+    "shortDescription": "A massive ancient amphitheater in Rome and one of the greatest symbols of the Roman Empire.",
+
+    "fullDescription": "The Colosseum, also known as the Flavian Amphitheatre, is one of the most iconic structures of ancient Rome. Built during the reign of the Flavian emperors, the arena hosted gladiatorial contests, public spectacles, theatrical performances, and mock naval battles. With its advanced engineering and enormous capacity, the Colosseum remains a masterpiece of Roman architecture and a powerful symbol of Italy’s cultural heritage.",
+
+    "historicalSignificance": [
+      "UNESCO World Heritage Site",
+      "One of the Seven Wonders of the World",
+      "Symbol of the Roman Empire and ancient engineering"
+    ],
+
+    "facts": [
+      "The Colosseum could hold an estimated 50,000 to 80,000 spectators",
+      "It featured a complex underground system known as the hypogeum",
+      "The structure suffered damage from earthquakes and stone robbers over centuries"
+    ],
+
+    "tags": ["unesco", "world wonder", "italy", "roman empire", "architecture"],
+
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/960px-Colosseo_2020.jpg",
+      "https://cdn-imgix.headout.com/media/images/fe25256104e751232093a78f1a1135fa-20225-rome-colosseum-with-arena-and-roman-forum-semiprivate-guided-tour-10.jpg?auto=compress%2Cformat&w=1222.3999999999999&h=687.6&q=90&ar=16%3A9&crop=faces&fit=crop",
+      "https://media.cnn.com/api/v1/images/stellar/prod/210625150301-colosseum-4.jpg?q=w_2615,h_1471,x_0,y_0,c_fill/w_967/f_avif",
+      "https://colosseumrometickets.com/wp-content/uploads/2018/06/Aerial-closeup-of-the-Colosseum-in-Rome-1024x768.jpg.webp",
+      "https://colosseumrometickets.com/wp-content/uploads/2018/06/Aerial-view-of-the-Colosseum-known-as-Amphitheatrum-Flavium-symbol-of-the-city-of-Rome-of-Italy-and-one-of-the-seven-wonders-of-the-world.-In-ancient-times-it-was-used-for-gladiatorial-shows.-1024x575.jpg.webp"
+    ],
+
+    "location": {
+      "address": "Piazza del Colosseo, 1, Rome, Italy",
+      "coordinates": {
+        "latitude": 41.8902,
+        "longitude": 12.4922
+      }
+    },
+
+    "visitingInfo": {
+      "openingHours": "8:30 AM",
+      "closingHours": "7:15 PM",
+      "closedDays": ["January 1", "December 25"],
+      "entryFee": {
+        "local": "EUR 18",
+        "foreign": "EUR 18"
+      }
+    },
+
+    "ratings": {
+      "average": 4.9,
+      "reviewCount": 624731
+    },
+
+    "theme": {
+      "primaryColor": "#9C6B43",
+      "accentColor": "#E8D8C5"
+    },
+
+    "seo": {
+      "metaTitle": "Colosseum - Global Heritage",
+      "metaDescription": "Explore the Colosseum in Rome, one of the greatest architectural achievements of the ancient Roman Empire."
+    }
+  },
+
+  {
+    "id": 25,
+    "slug": "stonehenge",
+    "name": "Stonehenge",
+
+    "zone": "west",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "city": "Wiltshire",
+
+    "isWorldWonder": false,
+    "isFeatured": true,
+
+    "yearBuilt": "3000 BC",
+    "completedYear": "2000 BC",
+    "builtBy": "Neolithic Communities",
+    "architecturalStyle": "Prehistoric Megalithic Architecture",
+
+    "shortDescription": "A prehistoric stone circle in England famous for its massive standing stones and ancient mystery.",
+
+    "fullDescription": "Stonehenge is one of the world's most famous prehistoric monuments, located on Salisbury Plain in southern England. Built in several phases over thousands of years, the site consists of massive standing stones arranged in concentric formations. Archaeologists believe Stonehenge served ceremonial, astronomical, and spiritual purposes, particularly relating to the movements of the sun during solstices. Its origins and methods of construction continue to fascinate historians and scientists today.",
+
+    "historicalSignificance": [
+      "UNESCO World Heritage Site",
+      "One of the most important prehistoric monuments in Europe",
+      "Ancient ceremonial and astronomical site"
+    ],
+
+    "facts": [
+      "Some stones were transported from Wales over 200 kilometers away",
+      "The monument aligns with the sunrise during the summer solstice",
+      "Stonehenge was constructed in multiple phases over approximately 1,000 years"
+    ],
+
+    "tags": ["unesco", "historical", "england", "prehistoric", "archaeology"],
+
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/960px-Stonehenge2007_07_30.jpg",
+      "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/stonehenge/history/significance/stonehenge-from-north-east.jpg?w=1440&h=612&mode=crop&scale=both&quality=100&anchor=NoFocus&WebsiteVersion=20200219",
+      "https://static.dw.com/image/54689649_605.webp",
+      "https://www.johnogroat-journal.co.uk/_media/img/750x0/8LVSUJU0W6FYFQSUYTCZ.jpg",
+      "https://cdn-imgix.headout.com/media/images/e35fb0c7e9e30fa228ae3308f9da1974-stonehenge-06.jpg?auto=compress%2Cformat&w=1222.3999999999999&h=687.6&q=90&ar=16%3A9&crop=faces&fit=crop"
+    ],
+
+    "location": {
+      "address": "Salisbury SP4 7DE, Wiltshire, England",
+      "coordinates": {
+        "latitude": 51.1789,
+        "longitude": -1.8262
+      }
+    },
+
+    "visitingInfo": {
+      "openingHours": "9:30 AM",
+      "closingHours": "5:00 PM",
+      "closedDays": ["December 25"],
+      "entryFee": {
+        "local": "GBP 25",
+        "foreign": "GBP 25"
+      }
+    },
+
+    "ratings": {
+      "average": 4.7,
+      "reviewCount": 193582
+    },
+
+    "theme": {
+      "primaryColor": "#7A6B5A",
+      "accentColor": "#DFD7CF"
+    },
+
+    "seo": {
+      "metaTitle": "Stonehenge - Global Heritage",
+      "metaDescription": "Discover Stonehenge, England's mysterious prehistoric stone circle and one of the world's most iconic ancient monuments."
+    }
+  },
+
+  {
+    "id": 26,
+    "slug": "seville-cathedral",
+    "name": "Seville Cathedral",
+
+    "zone": "south",
+    "continent": "Europe",
+    "country": "Spain",
+    "city": "Seville",
+
+    "isWorldWonder": false,
+    "isFeatured": true,
+
+    "yearBuilt": "1401",
+    "completedYear": "1506",
+    "builtBy": "Archdiocese of Seville",
+    "architecturalStyle": "Gothic Architecture",
+
+    "shortDescription": "A monumental Gothic cathedral in Seville and one of the largest churches in the world.",
+
+    "fullDescription": "Seville Cathedral, officially known as the Cathedral of Saint Mary of the See, was built on the site of a former Almohad mosque after the Christian reconquest of Seville. Renowned for its immense scale, elaborate Gothic design, and iconic Giralda bell tower, the cathedral stands as one of Spain's greatest architectural and religious landmarks. It is also famously associated with the tomb of Christopher Columbus.",
+
+    "historicalSignificance": [
+      "UNESCO World Heritage Site",
+      "One of the largest Gothic cathedrals in the world",
+      "Historic symbol of Spain's religious and cultural heritage"
+    ],
+
+    "facts": [
+      "The cathedral was built on the remains of a 12th-century mosque",
+      "La Giralda originally served as a minaret before becoming a bell tower",
+      "Christopher Columbus is believed to be buried inside the cathedral"
+    ],
+
+    "tags": ["unesco", "historical", "spain", "cathedral", "architecture"],
+
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/1/19/Seville_Cathedral.jpg?_=20221119144131",
+      "https://mundodele.com/en/wp-content/uploads/2025/10/Seville-Cathedral-La-Giralda-Entry-Ticket.webp",
+      "https://cdn-imgix.headout.com/media/images/512df00c21e8a1ed0a206662222f8fe3-La%20Giralda.jpg?auto=compress%2Cformat&q=90&crop=faces&fit=crop",
+      "https://cdn-imgix.headout.com/media/images/451a031a-4129-4d19-96a8-bbde49e4c034-1753936620536-297464.jpg?auto=compress%2Cformat&q=90&crop=faces&fit=crop",
+      "https://cdn-imgix.headout.com/media/images/d3c061a4edd0948fd098868db4a4ed4d-Seville-08.jpg?auto=compress%2Cformat&q=90&crop=faces&fit=crop"
+    ],
+
+    "location": {
+      "address": "Avenida de la Constitución, Seville, Spain",
+      "coordinates": {
+        "latitude": 37.3861,
+        "longitude": -5.9926
+      }
+    },
+
+    "visitingInfo": {
+      "openingHours": "10:45 AM",
+      "closingHours": "5:00 PM",
+      "closedDays": ["Religious Holidays"],
+      "entryFee": {
+        "local": "EUR 12",
+        "foreign": "EUR 12"
+      }
+    },
+
+    "ratings": {
+      "average": 4.8,
+      "reviewCount": 214893
+    },
+
+    "theme": {
+      "primaryColor": "#A77A4A",
+      "accentColor": "#E9D8C4"
+    },
+
+    "seo": {
+      "metaTitle": "Seville Cathedral - Global Heritage",
+      "metaDescription": "Explore Seville Cathedral, Spain's magnificent Gothic landmark and UNESCO World Heritage Site."
+    }
+  },
+
+  {
+    "id": 27,
+    "slug": "vatican-city",
+    "name": "Vatican City",
+
+    "zone": "south",
+    "continent": "Europe",
+    "country": "Vatican City",
+    "city": "Vatican City",
+
+    "isWorldWonder": false,
+    "isFeatured": true,
+
+    "yearBuilt": "1506",
+    "completedYear": "1626",
+    "builtBy": "The Holy See",
+    "architecturalStyle": "Renaissance and Baroque Architecture",
+
+    "shortDescription": "The world's smallest independent state and the spiritual center of the Roman Catholic Church.",
+
+    "fullDescription": "Vatican City is an independent city-state enclaved within Rome and serves as the headquarters of the Roman Catholic Church and the residence of the Pope. Renowned for its extraordinary art, architecture, and religious significance, the city is home to iconic landmarks such as St. Peter's Basilica, the Sistine Chapel, and the Vatican Museums. Vatican City represents centuries of religious history, artistic achievement, and cultural influence.",
+
+    "historicalSignificance": [
+      "UNESCO World Heritage Site",
+      "Spiritual center of the Roman Catholic Church",
+      "Home to some of the world's greatest Renaissance artworks"
+    ],
+
+    "facts": [
+      "Vatican City is the smallest country in the world by area and population",
+      "Michelangelo painted the famous ceiling of the Sistine Chapel",
+      "St. Peter's Basilica is one of the largest churches in the world"
+    ],
+
+    "tags": ["unesco", "historical", "religious", "vatican", "architecture"],
+
+    "images": [
+      "https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_1080,h_540,g_auto/dpr_auto/f_auto/q_auto:eco/v1/gettyimages-487091297?_a=BAVMn6DY0",
+      "https://www.whatalifetours.com/wp-content/uploads/2024/01/anna-church-fnULBa088dc-unsplash-1210x423-1.jpg",
+      "https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_1080,h_540,g_auto/dpr_auto/f_auto/q_auto:eco/v1/vatican-city-GettyImages-1097352500?_a=BAVMn6DY0",
+      "https://mycountryeurope.com/wp-content/uploads/2020/01/Vatican-City-780x470.jpg",
+      "https://italytravelsecrets.com/wp-content/uploads/2023/12/How-big-is-vatican-city-population-density.jpg"
+    ],
+
+    "location": {
+      "address": "Vatican City",
+      "coordinates": {
+        "latitude": 41.9029,
+        "longitude": 12.4534
+      }
+    },
+
+    "visitingInfo": {
+      "openingHours": "8:00 AM",
+      "closingHours": "7:00 PM",
+      "closedDays": ["Sunday"],
+      "entryFee": {
+        "local": "EUR 17",
+        "foreign": "EUR 17"
+      }
+    },
+
+    "ratings": {
+      "average": 4.9,
+      "reviewCount": 512784
+    },
+
+    "theme": {
+      "primaryColor": "#C7A76A",
+      "accentColor": "#F1E6D4"
+    },
+
+    "seo": {
+      "metaTitle": "Vatican City - Global Heritage",
+      "metaDescription": "Discover Vatican City, the spiritual heart of Catholicism and home to some of the world’s greatest artistic treasures."
+    }
+  },
+
+  {
+    "id": 28,
+    "slug": "acropolis-of-athens",
+    "name": "Acropolis of Athens",
+
+    "zone": "south",
+    "continent": "Europe",
+    "country": "Greece",
+    "city": "Athens",
+
+    "isWorldWonder": false,
+    "isFeatured": true,
+
+    "yearBuilt": "447 BC",
+    "completedYear": "438 BC",
+    "builtBy": "Ancient Athenians under Pericles",
+    "architecturalStyle": "Classical Greek Architecture",
+
+    "shortDescription": "An ancient citadel in Athens featuring some of the most important monuments of classical Greece.",
+
+    "fullDescription": "The Acropolis of Athens is one of the world's most influential archaeological and cultural landmarks. Perched on a rocky hill above the city of Athens, the site contains iconic ancient structures such as the Parthenon, the Erechtheion, and the Temple of Athena Nike. Built during the Golden Age of Athens, the Acropolis symbolizes the achievements of classical Greek civilization in democracy, philosophy, art, and architecture.",
+
+    "historicalSignificance": [
+      "UNESCO World Heritage Site",
+      "Symbol of ancient Greek civilization and democracy",
+      "Home to the Parthenon, one of the most famous temples in history"
+    ],
+
+    "facts": [
+      "The Parthenon was dedicated to the goddess Athena",
+      "The Acropolis has survived wars, earthquakes, and centuries of change",
+      "It overlooks the modern city of Athens from a rocky hilltop"
+    ],
+
+    "tags": ["unesco", "historical", "greece", "ancient history", "architecture"],
+
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/1029_Acropolis_of_Athens_in_Greece_at_night_Photo_by_Giles_Laurent.jpg/960px-1029_Acropolis_of_Athens_in_Greece_at_night_Photo_by_Giles_Laurent.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/View_of_the_Acropolis_of_Athens_from_Mt_Lycabettus_on_April_22%2C_2022.jpg/960px-View_of_the_Acropolis_of_Athens_from_Mt_Lycabettus_on_April_22%2C_2022.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Erechtheum_Acropolis_Athens.jpg/960px-Erechtheum_Acropolis_Athens.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5f8ebb6cd4c1781c8eeda877/7fd3ddb1-8104-46f0-a0be-f34568953d83/Ac2.jpg?format=1000w",
+      "https://whyathens.com/wp-content/uploads/2016/10/Porch-Caryatids-Acropolis-Why-Athens-1024x512.jpg"
+    ],
+
+    "location": {
+      "address": "Athens 105 58, Greece",
+      "coordinates": {
+        "latitude": 37.9715,
+        "longitude": 23.7257
+      }
+    },
+
+    "visitingInfo": {
+      "openingHours": "8:00 AM",
+      "closingHours": "8:00 PM",
+      "closedDays": ["January 1", "December 25"],
+      "entryFee": {
+        "local": "EUR 20",
+        "foreign": "EUR 20"
+      }
+    },
+
+    "ratings": {
+      "average": 4.9,
+      "reviewCount": 387412
+    },
+
+    "theme": {
+      "primaryColor": "#C2A06D",
+      "accentColor": "#EFE2CF"
+    },
+
+    "seo": {
+      "metaTitle": "Acropolis of Athens - Global Heritage",
+      "metaDescription": "Explore the Acropolis of Athens, the legendary center of ancient Greek civilization and classical architecture."
+    }
+  },
+  {
+    "id": 29,
+    "slug": "great-barrier-reef",
+    "name": "Great Barrier Reef",
+
+    "zone": "east",
+    "continent": "Oceania",
+    "country": "Australia",
+    "city": "Queensland",
+
+    "isWorldWonder": true,
+    "isFeatured": true,
+
+    "yearBuilt": "Unknown",
+    "completedYear": "Ongoing Natural Formation",
+    "builtBy": "Coral Polyps",
+    "architecturalStyle": "Marine Ecosystem",
+
+    "shortDescription": "The world's largest coral reef system located off the coast of Queensland, Australia.",
+
+    "fullDescription": "The Great Barrier Reef is the largest coral reef ecosystem on Earth, stretching over 2,300 kilometers along Australia's northeastern coast. Composed of thousands of individual reefs and islands, the reef supports an extraordinary diversity of marine life, including fish, turtles, sharks, dolphins, and coral species. Visible from space, the Great Barrier Reef is celebrated for its ecological importance, breathtaking beauty, and scientific significance.",
+
+    "historicalSignificance": [
+      "UNESCO World Heritage Site",
+      "Largest coral reef system in the world",
+      "One of the most biodiverse marine ecosystems on Earth"
+    ],
+
+    "facts": [
+      "The reef contains over 2,900 individual coral reefs",
+      "It is home to thousands of marine species",
+      "Climate change and coral bleaching pose major threats to the reef"
+    ],
+
+    "tags": ["unesco", "natural wonder", "australia", "marine life", "nature"],
+
+    "images": [
+      "https://www.montereyboats.com/zupload/library/832/-2424-1000x700-0.jpg?ztv=20160415123402",
+      "https://www.relaxingjourneys.co.nz/wp-content/uploads/2024/10/the-great-barrier-reef-768x403.jpg",
+      "https://greatbarrierreeftours.com/files/2024/12/great-barrier-reef-snorkelling-1536x1027.jpg",
+      "https://greatbarrierreeftours.com/files/2020/03/great-barrier-reef-diving-tours-1024x1024.jpg",
+      "https://greatbarrierreeftours.com/files/2024/10/whitehaven-beach-4-1536x481.jpg"
+    ],
+
+    "location": {
+      "address": "Great Barrier Reef, Queensland, Australia",
+      "coordinates": {
+        "latitude": -18.2871,
+        "longitude": 147.6992
+      }
+    },
+
+    "visitingInfo": {
+      "openingHours": "Open Year-Round",
+      "closingHours": "Open Year-Round",
+      "entryFee": {
+        "local": "AUD 0",
+        "foreign": "AUD 0"
+      }
+    },
+
+    "ratings": {
+      "average": 4.9,
+      "reviewCount": 418276
+    },
+
+    "theme": {
+      "primaryColor": "#2F9EB3",
+      "accentColor": "#D7F0F5"
+    },
+
+    "seo": {
+      "metaTitle": "Great Barrier Reef - Global Heritage",
+      "metaDescription": "Discover the Great Barrier Reef, Australia’s world-famous coral reef ecosystem and natural wonder."
+    }
+  },
+
+  {
+    "id": 30,
+    "slug": "uluru",
+    "name": "Uluru",
+
+    "zone": "central",
+    "continent": "Oceania",
+    "country": "Australia",
+    "city": "Northern Territory",
+
+    "isWorldWonder": false,
+    "isFeatured": true,
+
+    "yearBuilt": "Unknown",
+    "completedYear": "Natural Formation",
+    "builtBy": "Natural Formation",
+    "architecturalStyle": "Sandstone Monolith",
+
+    "shortDescription": "A massive sandstone monolith in central Australia sacred to the Anangu people.",
+
+    "fullDescription": "Uluru, also known as Ayers Rock, is one of Australia's most iconic natural landmarks. Rising dramatically from the desert landscape of the Northern Territory, the sandstone monolith is deeply sacred to the Indigenous Anangu people and holds immense cultural and spiritual significance. Uluru is famous for its striking red appearance, which changes color throughout the day depending on the sunlight.",
+
+    "historicalSignificance": [
+      "UNESCO World Heritage Site",
+      "Sacred site of the Anangu people",
+      "One of Australia's most important natural and cultural landmarks"
+    ],
+
+    "facts": [
+      "Uluru stands approximately 348 meters high",
+      "The rock changes color at sunrise and sunset",
+      "Climbing Uluru was permanently banned in 2019 out of respect for Indigenous culture"
+    ],
+
+    "tags": ["unesco", "natural wonder", "australia", "indigenous", "nature"],
+
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/ULURU.jpg/960px-ULURU.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Uluru_petroglyphs_IV.jpg/960px-Uluru_petroglyphs_IV.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/TreesUpUluru.JPG/960px-TreesUpUluru.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Uluru_close_up.JPG/960px-Uluru_close_up.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/b/ba/UluruRockWater.jpg"
+    ],
+
+    "location": {
+      "address": "Uluru-Kata Tjuta National Park, Northern Territory, Australia",
+      "coordinates": {
+        "latitude": -25.3444,
+        "longitude": 131.0369
+      }
+    },
+
+    "visitingInfo": {
+      "openingHours": "5:00 AM",
+      "closingHours": "9:00 PM",
+      "entryFee": {
+        "local": "AUD 38",
+        "foreign": "AUD 38"
+      }
+    },
+
+    "ratings": {
+      "average": 4.8,
+      "reviewCount": 172583
+    },
+
+    "theme": {
+      "primaryColor": "#B5532E",
+      "accentColor": "#EFD7C7"
+    },
+
+    "seo": {
+      "metaTitle": "Uluru - Global Heritage",
+      "metaDescription": "Explore Uluru, Australia's sacred sandstone monolith and one of the world's most iconic natural landmarks."
+    }
+  },
+
+  {
+    "id": 31,
+    "slug": "sydney-opera-house",
+    "name": "Sydney Opera House",
+
+    "zone": "east",
+    "continent": "Oceania",
+    "country": "Australia",
+    "city": "Sydney",
+
+    "isWorldWonder": false,
+    "isFeatured": true,
+
+    "yearBuilt": "1959",
+    "completedYear": "1973",
+    "builtBy": "Government of New South Wales",
+    "architecturalStyle": "Modern Expressionist Architecture",
+
+    "shortDescription": "A world-famous performing arts center located on Sydney Harbour in Australia.",
+
+    "fullDescription": "The Sydney Opera House is one of the most recognizable architectural masterpieces of the modern era. Designed by Danish architect Jørn Utzon, the building is celebrated for its sail-like roof structures and stunning waterfront location on Sydney Harbour. Serving as a center for music, theater, opera, and cultural events, the Opera House has become an enduring symbol of Australia and contemporary architectural innovation.",
+
+    "historicalSignificance": [
+      "UNESCO World Heritage Site",
+      "One of the greatest works of 20th-century architecture",
+      "Global symbol of Australian culture and creativity"
+    ],
+
+    "facts": [
+      "The roof design was inspired by ship sails and seashells",
+      "More than 1,500 performances are hosted there each year",
+      "The building contains over one million roof tiles"
+    ],
+
+    "tags": ["unesco", "architecture", "australia", "performing arts", "modern landmark"],
+
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Sydney_Australia._%2821339175489%29.jpg/960px-Sydney_Australia._%2821339175489%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Interior_of_Sydney_Opera_House_Concert_Hall_during_performance.jpg/960px-Interior_of_Sydney_Opera_House_Concert_Hall_during_performance.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Sydney_Opera_House_restaurant_April_2019.jpg/960px-Sydney_Opera_House_restaurant_April_2019.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/SYDNEY_OPERA_HOUSE_under_construction_circa_1965.tif/lossy-page1-960px-SYDNEY_OPERA_HOUSE_under_construction_circa_1965.tif.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/SSO_at_the_Concert_Hall_in_the_Sydney_Opera_House_on_20_July_2022.jpg/960px-SSO_at_the_Concert_Hall_in_the_Sydney_Opera_House_on_20_July_2022.jpg"
+    ],
+
+    "location": {
+      "address": "Bennelong Point, Sydney NSW 2000, Australia",
+      "coordinates": {
+        "latitude": -33.8568,
+        "longitude": 151.2153
+      }
+    },
+
+    "visitingInfo": {
+      "openingHours": "9:00 AM",
+      "closingHours": "5:00 PM",
+      "closedDays": ["Christmas Day"],
+      "entryFee": {
+        "local": "AUD 43",
+        "foreign": "AUD 43"
+      }
+    },
+
+    "ratings": {
+      "average": 4.8,
+      "reviewCount": 563821
+    },
+
+    "theme": {
+      "primaryColor": "#D8D2C8",
+      "accentColor": "#F3F1EC"
+    },
+
+    "seo": {
+      "metaTitle": "Sydney Opera House - Global Heritage",
+      "metaDescription": "Discover the Sydney Opera House, Australia’s iconic waterfront performing arts and architectural masterpiece."
+    }
+  },
+
+  {
+    "id": 32,
+    "slug": "australian-rock-art",
+    "name": "Australian Rock Art",
+
+    "zone": "north",
+    "continent": "Oceania",
+    "country": "Australia",
+    "city": "Kakadu",
+
+    "isWorldWonder": false,
+    "isFeatured": true,
+
+    "yearBuilt": "20000 BC",
+    "completedYear": "Ongoing Cultural Tradition",
+    "builtBy": "Indigenous Australian Peoples",
+    "architecturalStyle": "Rock Art and Cave Painting",
+
+    "shortDescription": "Ancient Indigenous Australian rock paintings and engravings found across Australia's landscapes.",
+
+    "fullDescription": "Australian Rock Art represents one of the oldest continuous artistic traditions in the world. Created by Indigenous Australian communities over tens of thousands of years, the artworks include paintings, carvings, stencils, and engravings depicting animals, spiritual beliefs, ceremonies, and daily life. Major rock art regions such as Kakadu National Park and the Kimberley preserve invaluable cultural knowledge and demonstrate the deep spiritual connection between Indigenous peoples and the land.",
+
+    "historicalSignificance": [
+      "One of the world's oldest continuous artistic traditions",
+      "Important record of Indigenous Australian culture and spirituality",
+      "Major archaeological and anthropological heritage"
+    ],
+
+    "facts": [
+      "Some rock art sites are estimated to be over 20,000 years old",
+      "The art includes x-ray style paintings showing internal anatomy of animals",
+      "Many sites remain sacred to Indigenous communities today"
+    ],
+
+    "tags": ["historical", "australia", "indigenous", "rock art", "archaeology"],
+
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bradshaw_rock_paintings.jpg/960px-Bradshaw_rock_paintings.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Wandjina_rock_art.jpg/960px-Wandjina_rock_art.jpg",
+      "https://www.nma.gov.au/__data/assets/image/0006/821166/nma.img-ci20031008-086-wm-vs1.jpg",
+      "https://www.nma.gov.au/__data/assets/image/0005/684293/MA23032506-petroglyphs-1200w.jpg",
+      "https://www.nma.gov.au/__data/assets/image/0008/684287/MA60153849-walinynga-cave-hill-1200w-timeline.jpg"
+    ],
+
+    "location": {
+      "address": "Kakadu National Park, Northern Territory, Australia",
+      "coordinates": {
+        "latitude": -12.7209,
+        "longitude": 132.5349
+      }
+    },
+
+    "visitingInfo": {
+      "openingHours": "7:00 AM",
+      "closingHours": "8:00 PM",
+      "entryFee": {
+        "local": "AUD 25",
+        "foreign": "AUD 40"
+      }
+    },
+
+    "ratings": {
+      "average": 4.8,
+      "reviewCount": 27415
+    },
+
+    "theme": {
+      "primaryColor": "#A15C3B",
+      "accentColor": "#ECD9C8"
+    },
+
+    "seo": {
+      "metaTitle": "Australian Rock Art - Global Heritage",
+      "metaDescription": "Explore Australian Rock Art, one of the world's oldest artistic traditions created by Indigenous Australian peoples."
+    }
   }
 ]
