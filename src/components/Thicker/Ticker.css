@@ -1,0 +1,457 @@
+/* =========================================================================
+   COMPLETE HOMEPAGE DESIGNS WITH ADAPTIVE RESPONSIVE TRACKING (home.css)
+   ========================================================================= */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  box-sizing: border-box;
+}
+
+/* --- 1. HERO LANDING SECTION --- */
+.hero-section {
+  width: 100%;
+  height: 85vh; 
+  min-height: 550px;
+  background-image: url('/src/assets/pyramid-bg.jpg'); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden; 
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;        
+  background: transparent; /* Kept completely bright to show off your asset image cleanly */
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1126px; 
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  box-sizing: border-box;
+  text-align: left; /* Strict left alignment layout tracking */
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--color-brand-300); 
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: var(--font-heading); 
+  font-size: 52px; 
+  line-height: 1.15;
+  font-weight: 500;
+  color: var(--bg-surface); 
+  margin: 0 0 32px 0;
+  max-width: 720px; 
+}
+
+/* --- 2. TRENDING MONUMENTS SECTION --- */
+.trending-section {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  box-sizing: border-box;
+}
+
+.trending-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  gap: 24px;
+}
+
+.trending-header h2 {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+  font-weight: 500;
+}
+
+.trending-header p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin: 0;
+}
+
+/* Two-column master grid setup */
+.monuments-layout-grid {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.main-monument-card {
+  flex: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body-content {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-location {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.main-monument-card h3 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--text-primary);
+  margin: 0 0 14px 0;
+}
+
+.main-monument-card p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 16px 0;
+}
+
+.card-date-badge {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.text-link-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0;
+}
+
+.side-discovery-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.discovery-label-heading {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.side-card-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.side-image-wrapper {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.side-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.side-card-body {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.side-card-body h3 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.side-card-body p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0 0 16px 0;
+}
+
+/* --- 3. SPECIAL EXHIBITION LAYOUT --- */
+.exhibition-section {
+  width: 100%;
+  background-color: var(--color-primary-900); 
+  color: var(--bg-surface);
+  padding: 100px 0;
+}
+
+.exhibition-container {
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.exhibition-image-side {
+  flex: 1.2;
+  height: 480px;
+}
+
+.exhibition-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exhibition-text-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.exhibition-badge {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #cbb281;
+  margin-bottom: 20px;
+}
+
+.exhibition-text-side h2 {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  line-height: 1.2;
+  margin: 0 0 24px 0;
+}
+
+.exhibition-intro {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: #a4cbdc; 
+  margin: 0 0 16px 0;
+}
+
+.exhibition-details {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 32px 0;
+}
+
+/* --- 4. CHRONOLOGY TIMELINE --- */
+.chronology-section {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 100px 40px;
+  box-sizing: border-box;
+}
+
+.chronology-main-title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--text-primary);
+  margin-bottom: 60px;
+  font-weight: 500;
+}
+
+.timeline-horizontal-grid {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+.timeline-node {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-default);
+  padding-top: 24px;
+}
+
+.node-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.node-year {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.timeline-node h4 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--text-primary);
+  margin: 0;
+  font-weight: 500;
+}
+
+.timeline-node p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* =========================================================================
+   UNIVERSAL DEVICE MEDIA RESPONSIVENESS MEDIA BREAKS
+   ========================================================================= */
+
+/* --- TABLETS & MEDIUM SCREENS (1024px down) --- */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 42px;
+  }
+  .monuments-layout-grid {
+    gap: 24px;
+  }
+  .card-image-wrapper {
+    height: 340px;
+  }
+  .exhibition-container {
+    gap: 32px;
+  }
+  .exhibition-image-side {
+    height: 380px;
+  }
+}
+
+/* --- MOBILE LANDSCAPE & PHONES (768px down) --- */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+    min-height: 450px;
+  }
+  .hero-content {
+    padding: 0 24px;
+  }
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .trending-section {
+    padding: 60px 24px;
+  }
+  .trending-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+  .trending-header p {
+    max-width: 100%;
+  }
+
+  /* Structural Collapse: Stacks side-by-side components into vertical grid channels */
+  .monuments-layout-grid, 
+  .exhibition-container, 
+  .timeline-horizontal-grid {
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+  }
+
+  .card-image-wrapper {
+    height: 280px;
+  }
+  .side-image-wrapper {
+    height: 260px;
+  }
+
+  .exhibition-section {
+    padding: 60px 24px;
+  }
+  .exhibition-image-side {
+    width: 100%;
+    height: 280px;
+  }
+
+  .chronology-section {
+    padding: 60px 24px;
+  }
+  .chronology-main-title {
+    margin-bottom: 40px;
+    font-size: 28px;
+  }
+  .timeline-node {
+    padding-top: 16px;
+  }
+}
+
+/* --- SMALL DEVICE CHANNELS (480px down) --- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+  .trending-header h2 {
+    font-size: 26px;
+  }
+  .exhibition-text-side h2 {
+    font-size: 28px;
+  }
+}

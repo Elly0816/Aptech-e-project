@@ -167,6 +167,7 @@ const Home = () => {
 
         <div className="timeline-vertical-container">
           {monuments.slice(0, 3).map((monument, index) => (
+            
             <div className="timeline-row" key={monument.id}>
               {/* LEFT SIDE */}
               <div className="timeline-left">
@@ -177,7 +178,7 @@ const Home = () => {
                     <h4>{monument.name}</h4>
                   </>
                 ) : (
-                  <p>{monument.description}</p>
+                  <p>{monument.shortDescription}</p>
                 )}
               </div>
 
