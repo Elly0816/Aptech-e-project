@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router';
 import monuments from '../../data/monuments.json';
 import Button from '../Button/Button';
 import { CustomNavLink } from '../CustomNavlink/CustomNavLink';
@@ -5,6 +6,8 @@ import LiveTicker from '../Ticker/Ticker';
 import './Home.css';
 
 const Home = ({ randomMonument, getNextMonument }) => {
+  const navigate = useNavigate();
+
   const handleBeginJourney = () => {
     console.log('Journey initiated...');
   };
@@ -14,22 +17,14 @@ const Home = ({ randomMonument, getNextMonument }) => {
   };
 
   const handleExploreRecord = (monument) => {
-    console.log(`Exploring ${monument}...`);
+    console.log(`Exploring ${monument.name}...`);
+    navigate(`/monument/${monument.id}`);
   };
 
-  const handleReadChapter = () => {
-    console.log('Opening featured chapter...');
+  const handleReadChapter = (id) => {
+    console.log(`Opening featured chapter %s...`, id);
+    navigate(`/monument/${id}`);
   };
-
-  // const { randomMonument } = useMonuments();
-
-  // //DO NOT TOUCH THIS!
-  // const number = useMonumentNumber();
-  // const randomMonument = monuments[number];
-  // console.log('This is the random monument: %s', JSON.stringify(randomMonument));
-  // const getNextMonument = (index) => {
-  //   return monuments[index % monuments.length];
-  // };
 
   return (
     <div className="home-page">
@@ -93,7 +88,7 @@ const Home = ({ randomMonument, getNextMonument }) => {
 
                 <span className="card-date-badge">{randomMonument.year}</span>
 
-                <button className="text-link-btn" onClick={() => handleExploreRecord(monuments[0].name)}>
+                <button className="text-link-btn" onClick={() => handleExploreRecord(randomMonument)}>
                   EXPLORE RECORD →
                 </button>
               </div>
@@ -117,7 +112,7 @@ const Home = ({ randomMonument, getNextMonument }) => {
 
                   <p>{getNextMonument(1).description}</p>
 
-                  <button className="text-link-btn" onClick={() => handleExploreRecord(getNextMonument(1).name)}>
+                  <button className="text-link-btn" onClick={() => handleExploreRecord(getNextMonument(1))}>
                     EXPLORE RECORD →
                   </button>
                 </div>
@@ -156,7 +151,11 @@ const Home = ({ randomMonument, getNextMonument }) => {
             <p className="exhibition-details">{getNextMonument(2).seo.metaDescription}</p>
 
             <div className="exhibition-action">
-              <Button variant="btn-solid" text="READ FEATURED CHAPTER" onClick={handleReadChapter} />
+              <Button
+                variant="btn-solid"
+                text="READ FEATURED CHAPTER"
+                onClick={() => handleReadChapter(getNextMonument(2).id)}
+              />
             </div>
           </div>
         </div>
