@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import { useDimensions } from '../../hooks/useDimensions';
-import { useMonumentNumber } from '../../hooks/useRandomMonument';
+// import { useMonumentNumber } from '../../hooks/useRandomMonument';
 import './Footer.css';
 
 const Footer = () => {
   const { pathname } = useLocation();
   const { isMobile } = useDimensions();
   const navigate = useNavigate();
-  const number = useMonumentNumber();
+  // const number = useMonumentNumber();
 
   const [activeTab, setActiveTab] = useState(() => {
     if (pathname === '/') return 'Explore';
@@ -55,23 +55,23 @@ const Footer = () => {
         </svg>
       ),
     },
-    {
-      key: 'Monument',
-      path: `/monument/${number}`,
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="2"
-          stroke="currentColor"
-          className="mobile-nav-icon"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M4 17l8-10 8 10" />
-          <path strokeLinecap="round" strokeLinejoin="round" d="M8 17v-4h8v4" />
-        </svg>
-      ),
-    },
+    // {
+    //   key: 'Monument',
+    //   path: `/monument/${number}`,
+    //   icon: (
+    //     <svg
+    //       xmlns="http://www.w3.org/2000/svg"
+    //       fill="none"
+    //       viewBox="0 0 24 24"
+    //       strokeWidth="2"
+    //       stroke="currentColor"
+    //       className="mobile-nav-icon"
+    //     >
+    //       <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M4 17l8-10 8 10" />
+    //       <path strokeLinecap="round" strokeLinejoin="round" d="M8 17v-4h8v4" />
+    //     </svg>
+    //   ),
+    // },
     {
       key: 'Gallery',
       path: '/gallery',

@@ -3,7 +3,14 @@ import { NavLink, useLocation } from 'react-router';
 import { useMonumentNumber } from '../../hooks/useRandomMonument';
 import './Header.css';
 
-const navItems = ['Explore', 'Continents', 'Monument', 'Gallery', 'Saved', 'About'];
+const navItems = [
+  'Explore',
+  'Continents',
+  //  'Monument',
+  'Gallery',
+  'Saved',
+  'About',
+];
 
 const Header = () => {
   const number = useMonumentNumber();

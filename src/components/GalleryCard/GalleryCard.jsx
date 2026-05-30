@@ -1,5 +1,5 @@
 /* src/components/GalleryCard/GalleryCard.jsx */
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import './GalleryCard.css';
 
 function getLabel(item) {
@@ -13,6 +13,9 @@ const randomNumber = Math.random();
 
 export default function GalleryCard({ item, onOpen }) {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  const inGallery = pathname.toLocaleLowerCase().includes('gallery');
 
   return (
     <article className="gallery-card wg-grid-item" onClick={onOpen}>
@@ -33,16 +36,18 @@ export default function GalleryCard({ item, onOpen }) {
             {item.city}, {item.country}
           </address>
           <h3 className="gallery-card__name">{item.name}</h3>
-          <button
-            className="gallery-card__btn"
-            onClick={(e) => {
-              e.stopPropagation();
-              // onOpen();
-              navigate(`/monument/${item.id}`);
-            }}
-          >
-            View Chapter
-          </button>
+          {inGallery && (
+            <button
+              className="gallery-card__btn"
+              onClick={(e) => {
+                e.stopPropagation();
+                // onOpen();
+                navigate(`/monument/${item.id}`);
+              }}
+            >
+              View Chapter
+            </button>
+          )}
         </figcaption>
       </figure>
     </article>
