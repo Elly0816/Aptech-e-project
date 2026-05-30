@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import monuments from '../../data/monuments.json';
 import Button from '../Button/Button';
-import { CustomNavLinkWithH4, CustomNavlinkWithP } from '../CustomNavlink/CustomNavLink';
+import { CustomNavLinkWithH3, CustomNavLinkWithH4, CustomNavlinkWithP } from '../CustomNavlink/CustomNavLink';
 import LiveTicker from '../Ticker/Ticker';
 import './Home.css';
 
@@ -15,7 +16,38 @@ const TAGLINES = {
   antarctica: 'The Last Great Wilderness',
 };
 
+const normalizeYears = (m) => {
+  return m.yearBuilt.toLowerCase().includes('bc') || m.yearBuilt.toLowerCase().includes('bce')
+    ? { ...m, yearBuilt: parseInt(m.yearBuilt.split(' ')[0]) * -1 }
+    : m.yearBuilt.toLowerCase().includes('ce') || m.yearBuilt.toLowerCase().includes('ad') || !isNaN(m.yearBuilt)
+      ? { ...m, yearBuilt: parseInt(m.yearBuilt.split(' ')[0]) }
+      : m;
+};
+
+const sortByYear = (a, b) => {
+  console.log('a: ', a.yearBuilt);
+  console.log('b: ', b.yearBuilt);
+  if (isNaN(b.yearBuilt) && isNaN(a.yearBuilt)) {
+    return 0;
+  } else if (isNaN(b.yearBuilt)) {
+    return 1;
+  } else if (isNaN(a.yearBuilt)) {
+    return -1;
+  } else {
+    return parseInt(a.yearBuilt) - parseInt(b.yearBuilt);
+  }
+};
+
+const addEra = (m) => {
+  return m.yearBuilt < 0
+    ? { ...m, yearBuilt: `${m.yearBuilt * -1} BC` }
+    : m.yearBuilt >= 0
+      ? { ...m, yearBuilt: `${m.yearBuilt} CE` }
+      : m;
+};
+
 const Home = ({ randomMonument, getNextMonument }) => {
+  const [maxSize, setMaxSize] = useState(3);
   const navigate = useNavigate();
 
   const handleBeginJourney = (monument) => {
@@ -38,6 +70,12 @@ const Home = ({ randomMonument, getNextMonument }) => {
     navigate(`/monument/${id}`);
   };
 
+  const handleExpandChrono = () => {
+    setMaxSize((prev) => {
+      return Math.min(prev + 3, monuments.length);
+    });
+  };
+
   return (
     <div className="home-page">
       <LiveTicker />
@@ -45,12 +83,15 @@ const Home = ({ randomMonument, getNextMonument }) => {
       {/* =========================================================
           HERO SECTION
       ========================================================= */}
-      <section className="hero-section" style={{ backgroundImage: `url(${randomMonument.images[0]})` }}>
+      <section
+        className="hero-section"
+        style={{ background: `url(${randomMonument.images[0]}) center/cover no-repeat, rgba(0, 0, 0, 0.5)` }}
+      >
         <div className="hero-overlay">
           <div className="hero-content">
-            <span className="hero-subtitle">{TAGLINES[randomMonument.continent.toLowerCase()]}</span>
+            <span className="hero-subtitle">{TAGLINES[randomMonument.continent.toLowerCase()].toUpperCase()}</span>
 
-            <h1 className="hero-title">{randomMonument.seo.metaDescription.split(',')[0]}.</h1>
+            <h1 className="hero-title">{randomMonument.seo.metaDescription.split(',')[0].replace('.', '')}</h1>
 
             <div className="hero-action">
               <Button variant="btn-solid" text="Begin Journey" onClick={() => handleBeginJourney(randomMonument)} />
@@ -86,19 +127,26 @@ const Home = ({ randomMonument, getNextMonument }) => {
               </div>
 
               <div className="card-body-content">
-                <span className="card-location">
-                  {getNextMonument(1).city?.toUpperCase()}, {getNextMonument(1).country?.toUpperCase()}
-                </span>
+                <div className="card-location-container">
+                  <span className="card-location">
+                    {getNextMonument(1).city?.toUpperCase()}, {getNextMonument(1).country?.toUpperCase()}
+                  </span>
+                  <span className="card-year">
+                    {getNextMonument(1).yearBuilt.toLowerCase() === 'unknown'
+                      ? 'Natural Monument'
+                      : `Built ${getNextMonument(1).yearBuilt} - ${getNextMonument(1).completedYear}`}
+                  </span>
+                </div>
 
-                <h3>{getNextMonument(1).name}</h3>
+                <CustomNavLinkWithH3 monument={getNextMonument(1)} />
 
-                <p>{getNextMonument(1).description}</p>
+                <CustomNavlinkWithP monument={getNextMonument(1)} />
 
                 <span className="card-date-badge">{getNextMonument(1).year}</span>
 
-                <button className="text-link-btn" onClick={() => handleExploreRecord(getNextMonument(1))}>
+                {/* <button className="text-link-btn" onClick={() => handleExploreRecord(getNextMonument(1))}>
                   EXPLORE RECORD →
-                </button>
+                </button> */}
               </div>
             </div>
           )}
@@ -108,9 +156,8 @@ const Home = ({ randomMonument, getNextMonument }) => {
           ========================================================= */}
           {getNextMonument(2) && (
             <div className="side-discovery-card">
-              <span className="discovery-label-heading">DISCOVERY OF THE WEEK</span>
-
               <div className="side-card-inner">
+                <span className="discovery-label-heading">DISCOVERY OF THE WEEK</span>
                 <div className="side-image-wrapper">
                   <img src={getNextMonument(2).images[1]} alt={getNextMonument(2).name} />
                 </div>
@@ -118,7 +165,7 @@ const Home = ({ randomMonument, getNextMonument }) => {
                 <div className="side-card-body">
                   <h3>{getNextMonument(2).name}</h3>
 
-                  <p>{getNextMonument(2).description}</p>
+                  <p>{getNextMonument(2).shortDescription}</p>
 
                   <button className="text-link-btn" onClick={() => handleExploreRecord(getNextMonument(2))}>
                     EXPLORE RECORD →
@@ -177,8 +224,10 @@ const Home = ({ randomMonument, getNextMonument }) => {
 
         <div className="timeline-vertical-container">
           {monuments
-            .sort((a, b) => parseInt(b.yearBuilt.split(' ')[0]) - a.yearBuilt.split(' ')[0])
-            .slice(0, 3)
+            .map(normalizeYears)
+            .sort(sortByYear)
+            .map(addEra)
+            .slice(0, maxSize)
             .map((monument, index) => (
               <div className="timeline-row" key={monument.id}>
                 {/* LEFT SIDE */}
@@ -214,6 +263,15 @@ const Home = ({ randomMonument, getNextMonument }) => {
               </div>
             ))}
         </div>
+        {maxSize < monuments.length ? (
+          <div className="show-more">
+            <Button text={'Show more'} style={{ backgroundColor: '#c46311' }} onClick={handleExpandChrono} />
+          </div>
+        ) : (
+          <div className="show-more">
+            <Button text={'Show less'} style={{ backgroundColor: '#c46311' }} onClick={() => setMaxSize(3)} />
+          </div>
+        )}
       </section>
     </div>
   );

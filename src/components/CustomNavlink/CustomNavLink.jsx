@@ -22,6 +22,15 @@ export const CustomNavLinkWithH4 = ({ monument }) => {
   );
 };
 
+export const CustomNavLinkWithH3 = ({ monument }) => {
+  return (
+    <CustomNavLink to={`/monument/${monument.id}`}>
+      <span className="node-year">{monument.yearBuilt}</span>
+      <h3>{monument.name}</h3>
+    </CustomNavLink>
+  );
+};
+
 export const CustomNavlinkWithP = ({ monument }) => {
   return (
     <CustomNavLink to={`/monument/${monument.id}`}>

@@ -3,33 +3,36 @@
    ========================================================================= */
 .home-page {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: var(--bg-page);
   overflow-x: hidden;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* padding: 0 200px; */
 }
 /* =========================================================================
    HERO SECTION (Updated for Left Alignment)
    ========================================================================= */
 .hero-section {
   width: 100%;
-  min-height: 70vh;
-  /* background-image: url('https://cdn.britannica.com/06/122506-050-C8E03A8A/Pyramid-of-Khafre-Giza-Egypt.jpg'); */
-  background-size: cover;
-  background-position: center;
+  height: 87vh;
   display: flex;
   align-items: center;
   justify-content: flex-start; /* Ensures content snaps to the left */
-  padding: 60px 0;
+  /* padding: 60px 0; */
+  background-blend-mode: darken;
 }
 
 .hero-overlay {
   width: 100%;
+  display: flex;
+  justify-content: left;
 }
 
 .hero-content {
   width: 100%;
-  max-width: 1126px;
+  /* max-width: 1126px; */
   margin: 0 auto;
   padding: 0 40px;
   box-sizing: border-box;
@@ -45,10 +48,10 @@
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 600;
-  line-height: 20;
-  /* letter-spacing: 0.25em; */
+  line-height: 20px;
+  letter-spacing: 2.8px;
   color: var(--color-brand-300);
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   display: inline-block; /* Keeps layout spacing uniform */
 }
 
@@ -70,7 +73,7 @@
    ========================================================================= */
 .trending-section {
   width: 100%;
-  max-width: 1126px;
+  /* max-width: 1126px; */
   margin: 0 auto;
   padding: 80px 40px;
   box-sizing: border-box;
@@ -123,6 +126,12 @@
   display: block;
   margin-bottom: 8px;
 }
+
+.card-location-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .main-monument-card h3 {
   font-family: var(--font-heading);
   font-size: 28px;
@@ -154,16 +163,18 @@
    ========================================================================= */
 .side-discovery-card {
   flex: 1;
+  /* padding-bottom: 20%; */
 }
 .side-card-inner {
   /* Provides the card background block container layout */
   background-color: rgba(0, 0, 0, 0.03);
-  padding: 32px;
+  padding: 8% 8% 90%;
   box-sizing: border-box;
+  /* height: 100%; */
 }
 .discovery-label-heading {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 15px;
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 700;
@@ -218,7 +229,7 @@
   padding: 80px 0;
 }
 .exhibition-container {
-  max-width: 1126px;
+  /* max-width: 1126px; */
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
@@ -268,6 +279,7 @@
   padding: 100px 40px;
   background-color: var(--bg-page);
   box-sizing: border-box;
+  /* height: 100vh; */
 }
 .chronology-main-title {
   font-family: var(--font-heading);
@@ -360,6 +372,13 @@
   margin: 0;
   max-width: 420px;
 }
+
+.show-more {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
 /* =========================================================================
    TABLET
    ========================================================================= */
