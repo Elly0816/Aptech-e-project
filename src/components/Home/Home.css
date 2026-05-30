@@ -443,6 +443,14 @@
     font-size: 15px;
     max-width: 100%;
   }
+
+  .side-card-inner {
+    /* Provides the card background block container layout */
+    /* background-color: rgba(0, 0, 0, 0.03); */
+    padding: 8% 8% 8%;
+    /* box-sizing: border-box; */
+    /* height: 100%; */
+  }
 }
 /* =========================================================================
    SMALL MOBILE

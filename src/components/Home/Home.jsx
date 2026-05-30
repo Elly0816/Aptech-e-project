@@ -17,6 +17,8 @@ const TAGLINES = {
   antarctica: 'The Last Great Wilderness',
 };
 
+const MOBILE_TIMELINE_MARKERS = ['Antiquity', 'Classical', 'Medieval', 'Renaissance', 'Modern'];
+
 const normalizeYears = (m) => {
   return m.yearBuilt.toLowerCase().includes('bc') || m.yearBuilt.toLowerCase().includes('bce')
     ? { ...m, yearBuilt: parseInt(m.yearBuilt.split(' ')[0]) * -1 }
@@ -318,7 +320,7 @@ const Home = ({ randomMonument, getNextMonument }) => {
             <div className="mobile-timeline-line" />
 
             <div className="mobile-timeline-markers" aria-hidden="false">
-              {['Antiquity', 'Classical', 'Medieval', 'Renaissance', 'Modern'].map((era) => (
+              {MOBILE_TIMELINE_MARKERS.map((era) => (
                 <div className="timeline-marker" key={era}>
                   <div className="timeline-dot" />
                   <div className="timeline-label">{era}</div>
