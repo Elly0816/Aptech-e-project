@@ -463,4 +463,123 @@
     font-size: 14px;
     line-height: 1.6;
   }
+
+  .timeline-vertical-container::before {
+    visibility: hidden;
+  }
+}
+
+.read-chapter {
+  border-color: #2d3748;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.featured-chapter {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-chapter > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.featured-chapter h6 {
+  margin: 8px 0;
+}
+.featured-chapter button {
+  margin: 15px 0;
+}
+
+.chronology-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.chronology-mobile > div {
+  width: 1px;
+  height: 70px;
+  background-color: black;
+  margin-bottom: 40px;
+}
+
+/* =========================================================================
+   MOBILE TIMELINE
+   ========================================================================= */
+.mobile-timeline {
+  width: 100%;
+  max-width: 1126px;
+  margin: 40px auto;
+  padding: 8px 40px 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.mobile-timeline-line {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: 28px;
+  height: 4px;
+  background-color: var(--border-default);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.mobile-timeline-markers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 0;
+  padding: 0 6px;
+  min-width: 0;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #c46311;
+  box-shadow: 0 0 0 4px rgba(196, 99, 17, 0.08);
+  margin-bottom: 8px;
+}
+
+.timeline-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+  .mobile-timeline {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .mobile-timeline-line {
+    left: 16px;
+    right: 16px;
+    top: 32px;
+    background-color: black;
+    height: 1px;
+  }
+  .timeline-label {
+    font-size: 10px;
+    padding-top: 10px;
+  }
 }
