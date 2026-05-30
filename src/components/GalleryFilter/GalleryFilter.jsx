@@ -1,17 +1,17 @@
 /* src/components/GalleryFilter/GalleryFilter.jsx */
-import "./GalleryFilter.css";
+import './GalleryFilter.css';
 
 export default function GalleryFilter({ filters, active, onFilter }) {
   return (
     <nav className="gallery-filter" aria-label="Gallery filters">
-      {filters.map((f) => (
+      {filters.map((f, i) => (
         <button
-          key={f.id}
-          className={`gallery-filter__tab${active === f.id ? " active" : ""}`}
-          onClick={() => onFilter(f.id)}
-          aria-current={active === f.id ? "true" : undefined}
+          key={i}
+          className={`gallery-filter__tab${active === f ? ' active' : ''}`}
+          onClick={() => onFilter(f)}
+          aria-current={active === f.id ? 'true' : undefined}
         >
-          {f.label}
+          {f}
         </button>
       ))}
     </nav>

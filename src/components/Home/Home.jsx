@@ -1,21 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import monuments from '../../data/monuments.json';
+import { TAGLINES } from '../../helpers/helpers';
 import { useDimensions } from '../../hooks/useDimensions';
 import Button from '../Button/Button';
 import { CustomNavLinkWithH3, CustomNavLinkWithH4, CustomNavlinkWithP } from '../CustomNavlink/CustomNavLink';
 import LiveTicker from '../Ticker/Ticker';
 import './Home.css';
-
-const TAGLINES = {
-  africa: 'The Cradle of Civilization',
-  asia: 'The Forge of Empires',
-  europe: 'The Age of Exploration',
-  'north america': 'The Frontier of Innovation',
-  'south america': 'The Continent of Living Wonders',
-  oceania: 'The Ancient Island Continent',
-  antarctica: 'The Last Great Wilderness',
-};
 
 const MOBILE_TIMELINE_MARKERS = ['Antiquity', 'Classical', 'Medieval', 'Renaissance', 'Modern'];
 

@@ -1,0 +1,46 @@
+.continent-card {
+  position: relative;
+  display: block;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+  min-height: 160px;
+  background: #000;
+}
+.continent-card:focus {
+  outline: 3px solid rgba(196, 99, 17, 0.15);
+}
+.continent-card:hover .continent-card__bg {
+  transform: scale(1.06);
+}
+
+.continent-card__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: transform 350ms ease;
+}
+
+.continent-card__meta {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: #fff;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.55);
+}
+
+.continent-tag {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.95;
+  margin-bottom: 6px;
+}
+
+.continent-title {
+  margin: 0;
+  font-size: 1.15rem;
+}

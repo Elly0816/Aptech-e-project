@@ -1,20 +1,25 @@
 /* src/components/GalleryCard/GalleryCard.jsx */
-import "./GalleryCard.css";
+import { useNavigate } from 'react-router';
+import './GalleryCard.css';
 
 function getLabel(item) {
-  if (item.isWorldWonder) return "World Wonder";
-  const naturalTags = ["nature", "mountain", "adventure", "volcanic"];
-  if (item.tags?.some((t) => naturalTags.includes(t))) return "Natural";
-  return "Historical";
+  if (item.isWorldWonder) return 'World Wonder';
+  const naturalTags = ['nature', 'mountain', 'adventure', 'volcanic'];
+  if (item.tags?.some((t) => naturalTags.includes(t))) return 'Natural';
+  return 'Historical';
 }
 
+const randomNumber = Math.random();
+
 export default function GalleryCard({ item, onOpen }) {
+  const navigate = useNavigate();
+
   return (
     <article className="gallery-card wg-grid-item" onClick={onOpen}>
       <figure className="gallery-card__figure">
         <img
           className="gallery-card__img"
-          src={item.images[0]}
+          src={item.images[Math.floor(item.images.length * randomNumber)]}
           alt={item.name}
           loading="lazy"
         />
@@ -30,7 +35,11 @@ export default function GalleryCard({ item, onOpen }) {
           <h3 className="gallery-card__name">{item.name}</h3>
           <button
             className="gallery-card__btn"
-            onClick={(e) => { e.stopPropagation(); onOpen(); }}
+            onClick={(e) => {
+              e.stopPropagation();
+              // onOpen();
+              navigate(`/monument/${item.id}`);
+            }}
           >
             View Chapter
           </button>
