@@ -31,7 +31,7 @@ export const Monument = () => {
       />
 
       <Mon
-        // key={monument.id}
+        key={monument.id}
         name={monument.name}
         historicalSignificance={monument.historicalSignificance}
         fullDescription={monument.fullDescription}

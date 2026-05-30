@@ -18,8 +18,11 @@ export const Mon = ({
     <>
       <div className="container2">
         <div className="firstdiv">
-          <h2>Description</h2>
-          <p>{shortDescription}</p>
+          <div className="firsth2p">
+            <h2>Description</h2>
+            <p>{shortDescription}</p>
+          </div>
+
           <div className="imgag">
             <img src={images[1]} alt={name} />
             <img src={images[0]} alt={name} />
@@ -28,15 +31,15 @@ export const Mon = ({
 
           <div className="timeline">
             <h2>Historical Significance</h2>
-            {historicalSignificance.map((h, i) => (
-              <div className="timeline-item" key={i}>
+            {historicalSignificance.map((h) => (
+              <div className="timeline-item">
                 <p>{h}</p>
               </div>
             ))}
 
             <h2>Facts</h2>
-            {facts.map((f, i) => (
-              <div className="timeline-item" key={i}>
+            {facts.map((f) => (
+              <div className="timeline-item">
                 <p>{f}</p>
               </div>
             ))}
