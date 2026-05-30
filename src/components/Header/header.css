@@ -135,6 +135,12 @@
 
 /* Mobile Phones (Screen widths under 768px) */
 @media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    z-index: 9999 !important;      /* Brings navbar container to top layer stack */
+    pointer-events: auto !important; /* Forces the browser to intercept touch events */
+  }
+
   .navbar-container {
     flex-direction: column;
     height: auto;
@@ -148,11 +154,17 @@
     flex-wrap: wrap;
     gap: 14px;
     padding: 8px 0;
+    position: relative;
+    z-index: 10000 !important;     /* Keeps the links block clear of parent bounds */
   }
 
   .nav-item {
     font-size: var(--text-small-size);
-    padding: 4px 0;
+    padding: 4px 10px;             /* Padding bump to create larger touch tap targets */
+    display: inline-block;
+    position: relative;
+    z-index: 10001 !important;     /* Ensures text itself registers clicking inputs */
+    pointer-events: auto !important;
   }
 
   .navbar-profile {

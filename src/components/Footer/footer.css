@@ -3,12 +3,9 @@
    ========================================================================== */
 
 .footer {
-  /* Forces your project's light ivory surface color and overrides system dark mode */
   background-color: var(--bg-surface, #fff8f3) !important;
   border-top: 1px solid var(--border-default, #f2e7dd) !important;
   width: 100%;
-  background-color: var(--bg-footer);
-  border-top: 1px solid var(--border-default);
   padding: 60px 40px 30px 40px;
   box-sizing: border-box;
   display: flex;
@@ -42,19 +39,19 @@
 }
 
 .footer-logo {
-  font-family: var(--font-heading); /* Uses Playfair Display */
+  font-family: var(--font-heading);
   font-size: var(--text-heading-md-size);
   line-height: var(--text-heading-md-line-height);
   font-weight: 600;
-  color: var(--text-grey-active); /* Pure primary #121a28 deep tone */
+  color: var(--text-grey-active);
   margin: 0 0 20px 0;
 }
 
 .footer-description {
-  font-family: var(--text-heading-md-font); /* Uses Inter */
+  font-family: var(--text-heading-md-font);
   font-size: var(--text-heading-md-size);
   line-height: var(--text-heading-md-line-height);
-  color: var(--text-grey); /* Balanced #2d3d45 readability tone */
+  color: var(--text-grey);
   margin: 0 0 32px 0;
 }
 
@@ -69,9 +66,7 @@
   color: var(--text-dark);
   cursor: pointer;
   opacity: 0.85;
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .footer-icon:hover {
@@ -122,7 +117,7 @@
 }
 
 .footer-column ul li a:hover {
-  color: var(--color-primary); /* Shifts cleanly to your primary teal/blue on hover */
+  color: var(--color-primary);
 }
 
 /* Bottom Row Section Styles */
@@ -137,7 +132,7 @@
 .footer-tagline {
   font-family: var(--font-body);
   font-size: var(--text-caption-size);
-  color: var(--text-muted); /* Uses muted brown token #906d54 from your config */
+  color: var(--text-muted);
   font-style: italic;
 }
 
@@ -145,113 +140,97 @@
    UNIVERSAL RESPONSIVE FOOTER STYLES
    ========================================================================= */
 
-.footer {
-  width: 100%;
-  background-color: var(--bg-footer); /* Warm brand-100 tint */
-  border-top: 1px solid var(--border-default);
-  padding: 60px 24px 30px 24px; /* Slightly tighter horizontal padding to prevent page overflow */
-  box-sizing: border-box;
-}
+@media (max-width: 1126px) {
+  .footer {
+    padding: 60px 24px 30px 24px;
+  }
 
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  width: 100%;
-  max-width: 1126px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+    max-width: 1126px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 
-/* Master horizontal layout handler */
-.footer-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  gap: 40px;
-}
+  .footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 40px;
+  }
 
-.footer-brand-section {
-  flex: 1;
-  min-width: 280px;
-  max-width: 450px;
-}
+  .footer-brand-section {
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+  }
 
-.footer-logo {
-  font-family: var(--font-heading), 'Playfair Display', serif;
-  font-size: 28px;
-  color: var(--text-primary, #121a28) !important;
-  margin: 0 0 16px 0;
-}
+  .footer-logo {
+    font-family: var(--font-heading), 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--text-primary, #121a28) !important;
+    margin: 0 0 16px 0;
+  }
 
-.footer-description {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text-secondary, #2d3d45) !important;
-}
+  .footer-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-secondary, #2d3d45) !important;
+  }
 
-.footer-icons {
-  display: flex;
-  gap: 18px;
-}
+  .footer-links-section {
+    display: flex;
+    gap: 64px;
+  }
 
-.footer-icon {
-  width: 18px;
-  height: 18px;
-  color: var(--text-dark) !important;
-  cursor: pointer;
-}
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+  }
 
-/* Directory Menu Section Styling (Right Panel) */
-.footer-links-section {
-  display: flex;
-  gap: 64px;
-}
+  .footer-column h4 {
+    font-family: var(--text-small-font);
+    font-size: var(--text-small-size);
+    line-height: var(--text-small-line-height);
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    color: var(--text-dark) !important;
+    margin: 0 0 20px 0;
+    white-space: nowrap;
+  }
 
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  min-width: 160px;
-}
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-.footer-column h4 {
-  font-family: var(--text-small-font);
-  font-size: var(--text-small-size);
-  line-height: var(--text-small-line-height);
-  font-weight: 600;
-  letter-spacing: 1.4px;
-  color: var(--text-dark) !important;
-  margin: 0 0 20px 0;
-  white-space: nowrap; /* Stops DISCOVER and ORGANIZATION from breaking down mid-word */
-}
+  .footer-column ul li a {
+    font-family: var(--text-caption-font);
+    font-size: var(--text-caption-size);
+    color: var(--text-grey);
+    text-decoration: none;
+    white-space: nowrap;
+  }
 
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  .footer-bottom {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-default, #f2e7dd);
+    display: flex;
+    justify-content: flex-end;
+  }
 
-.footer-column ul li a {
-  font-family: var(--text-caption-font);
-  font-size: var(--text-caption-size);
-  color: var(--text-grey);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.footer-bottom {
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border-default, #f2e7dd);
-  display: flex;
-  justify-content: flex-end;
-}
-
-.footer-tagline {
-  font-size: 12px;
-  font-style: italic;
-  color: var(--text-muted, #906d54) !important;
+  .footer-tagline {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text-muted, #906d54) !important;
+  }
 }
 
 /* =========================================================================
@@ -260,32 +239,33 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 40px 16px 80px 16px; /* Added lower clearance cushion for mobile base bar */
+    padding: 40px 16px 80px 16px;
   }
 
-  /* Force vertical stacking instead of crunching items side-by-side */
   .footer-main {
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
   }
 
-  /* Release maximum restrictions so elements embrace total mobile window width */
   .footer-brand-section {
     max-width: 100%;
     width: 100%;
   }
 
-  /* Align directories row layout across the bottom of mobile screen */
   .footer-links-section {
     width: 100%;
-    justify-content: 间-between; /* Spreads menus outward evenly over narrow device spaces */
+    justify-content: space-between; /* Fixed typo from Chinese glyph */
     gap: 20px;
   }
 
   .footer-bottom {
-    justify-content: flex-start; /* Shifts watermark label text neatly to left on phones */
+    justify-content: flex-start;
     padding-top: 20px;
+  }
+
+  .footer-container {
+    padding: 48px 24px 100px 24px;
   }
 }
 
@@ -297,45 +277,38 @@
 }
 
 @media (max-width: 768px) {
-  /* Padding adjustments to ensure content doesn't get hidden under the floating bar */
-  .footer-container {
-    padding: 48px 24px 100px 24px;
-  }
-
-  .footer-links-section {
-    gap: 32px;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  /* Fixed Floating Dock Layout */
   .mobile-bottom-nav {
     display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 64px;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 64px !important;
     background-color: var(--bg-surface, #fff8f3) !important;
-    border-top: 1px solid var(--border-default, #f2e7dd);
+    border-top: 1px solid var(--border-default, #f2e7dd) !important;
     justify-content: space-around;
     align-items: center;
-    z-index: 1000;
+    z-index: 999999 !important; /* Stacked at topmost viewport layout layer */
+    pointer-events: auto !important; /* Ensures the links grab human touch entries cleanly */
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
-    padding-bottom: env(safe-area-inset-bottom); /* Safety margin for modern phone screens */
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   .mobile-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    font-family: var(--font-body), sans-serif;
-    color: var(--text-muted, #906d54);
-    cursor: pointer;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 11px !important;
+    font-family: var(--font-body), sans-serif !important;
+    color: var(--text-muted, #906d54) !important;
+    text-decoration: none !important; /* Clear browser a-tag defaults */
+    cursor: pointer !important;
     gap: 4px;
     flex: 1;
+    height: 100%;
+    pointer-events: auto !important;
+    z-index: 1000000 !important;
     transition: color 0.2s ease;
   }
 
@@ -343,18 +316,16 @@
     width: 22px;
     height: 22px;
     stroke: var(--text-muted, #906d54);
-    transition:
-      stroke 0.2s ease,
-      transform 0.2s ease;
+    transition: stroke 0.2s ease, transform 0.2s ease;
   }
 
-  /* Active Menu Item States */
+  /* Active Menu Item States configured for react-router targets */
   .mobile-nav-item.active {
     color: var(--text-muted) !important;
   }
 
   .mobile-nav-item.active .mobile-nav-icon {
     stroke: var(--color-primary-500, #134c66) !important;
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Beautifully retains your subtle active bounce look */
   }
 }

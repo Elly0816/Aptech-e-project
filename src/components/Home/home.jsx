@@ -1,3 +1,5 @@
+
+import { useNavigate } from 'react-router'; // Imported for real page navigation
 import monuments from '../../data/monuments.json';
 import Button from '../Button/Button';
 import { CustomNavLink } from '../CustomNavlink/CustomNavLink';
@@ -5,12 +7,16 @@ import LiveTicker from '../Ticker/Ticker';
 import './Home.css';
 
 const Home = ({ randomMonument, getNextMonument }) => {
+  const navigate = useNavigate(); // Hook invocation to handle routing changes
+
   const handleBeginJourney = () => {
-    console.log('Journey initiated...');
+    // Navigates directly to the dynamic monument details page using its identifier
+    navigate(`/monument/${randomMonument.id}`);
   };
 
   const handleViewAllMonuments = () => {
-    console.log('Loading all monuments gallery...');
+    // Navigates straight to your dedicated gallery page path
+    navigate('/gallery');
   };
 
   const handleExploreRecord = (monument) => {
@@ -18,18 +24,9 @@ const Home = ({ randomMonument, getNextMonument }) => {
   };
 
   const handleReadChapter = () => {
-    console.log('Opening featured chapter...');
+    // Navigates directly to your saved/bookmarked items page path
+    navigate('/saved');
   };
-
-  // const { randomMonument } = useMonuments();
-
-  // //DO NOT TOUCH THIS!
-  // const number = useMonumentNumber();
-  // const randomMonument = monuments[number];
-  // console.log('This is the random monument: %s', JSON.stringify(randomMonument));
-  // const getNextMonument = (index) => {
-  //   return monuments[index % monuments.length];
-  // };
 
   return (
     <div className="home-page">
@@ -134,7 +131,6 @@ const Home = ({ randomMonument, getNextMonument }) => {
         <div className="exhibition-container">
           <div className="exhibition-image-side">
             <img
-              // src="https://tse3.mm.bing.net/th/id/OIP.vu3Xj7XVKFuWPRtrbYvc4QHaGW?rs=1&pid=ImgDetMain&o=7&rm=3"
               src={getNextMonument(2).images[0]}
               alt="The Echoes of Petra"
             />
@@ -144,11 +140,7 @@ const Home = ({ randomMonument, getNextMonument }) => {
             <span className="exhibition-badge">SPECIAL EXHIBITION</span>
 
             <h2>
-              {/* The Echoes of Petra:
-              <br />A City Carved from Time */}
               {getNextMonument(2).name}
-              {/* <br /> */}
-              {/* {getNextMonument(2).shortDescription} */}
             </h2>
 
             <p className="exhibition-intro">{getNextMonument(2).shortDescription}</p>
