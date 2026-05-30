@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import monuments from '../data/monuments.json';
 
 const filters = Array.from(new Set(monuments.flatMap((m) => m.tags.map((t) => t))).values());
-console.log(filters);
+// console.log(filters);
 
 const getRandomNumber = () => {
   return Math.random();

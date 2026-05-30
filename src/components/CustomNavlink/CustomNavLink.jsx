@@ -12,3 +12,20 @@ export const CustomNavLink = ({ to, children, style, className }) => {
     </NavLink>
   );
 };
+
+export const CustomNavLinkWithH4 = ({ monument }) => {
+  return (
+    <CustomNavLink to={`/monument/${monument.id}`}>
+      <span className="node-year">{monument.yearBuilt}</span>
+      <h4>{monument.name}</h4>
+    </CustomNavLink>
+  );
+};
+
+export const CustomNavlinkWithP = ({ monument }) => {
+  return (
+    <CustomNavLink to={`/monument/${monument.id}`}>
+      <p>{monument.shortDescription}</p>
+    </CustomNavLink>
+  );
+};

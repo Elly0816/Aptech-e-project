@@ -9,10 +9,12 @@ const Header = () => {
   const number = useMonumentNumber();
   const { pathname } = useLocation();
   const [activeTab, setActiveTab] = useState(
-    pathname === '/' ? 'Explore' : pathname.charAt(0).toUpperCase() + pathname.slice(1)
+    pathname === '/'
+      ? 'Explore'
+      : pathname.toLowerCase().includes('monument')
+        ? 'Monument'
+        : pathname.charAt(0).toUpperCase() + pathname.slice(1)
   );
-  // console.log('location: %s', JSON.stringify(pathname));
-  // const navItems = ['Explore', 'Continents', 'Gallery', 'Saved', 'About'];
 
   return (
     <nav className="navbar">

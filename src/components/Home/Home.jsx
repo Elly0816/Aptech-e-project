@@ -1,19 +1,31 @@
 import { useNavigate } from 'react-router';
 import monuments from '../../data/monuments.json';
 import Button from '../Button/Button';
-import { CustomNavLink } from '../CustomNavlink/CustomNavLink';
+import { CustomNavLinkWithH4, CustomNavlinkWithP } from '../CustomNavlink/CustomNavLink';
 import LiveTicker from '../Ticker/Ticker';
 import './Home.css';
+
+const TAGLINES = {
+  africa: 'The Cradle of Civilization',
+  asia: 'The Forge of Empires',
+  europe: 'The Age of Exploration',
+  'north america': 'The Frontier of Innovation',
+  'south america': 'The Continent of Living Wonders',
+  oceania: 'The Ancient Island Continent',
+  antarctica: 'The Last Great Wilderness',
+};
 
 const Home = ({ randomMonument, getNextMonument }) => {
   const navigate = useNavigate();
 
-  const handleBeginJourney = () => {
+  const handleBeginJourney = (monument) => {
     console.log('Journey initiated...');
+    navigate(`/monument/${monument.id}`);
   };
 
   const handleViewAllMonuments = () => {
     console.log('Loading all monuments gallery...');
+    navigate('/gallery');
   };
 
   const handleExploreRecord = (monument) => {
@@ -36,16 +48,12 @@ const Home = ({ randomMonument, getNextMonument }) => {
       <section className="hero-section" style={{ backgroundImage: `url(${randomMonument.images[0]})` }}>
         <div className="hero-overlay">
           <div className="hero-content">
-            <span className="hero-subtitle">THE CRADLE OF CIVILIZATION</span>
+            <span className="hero-subtitle">{TAGLINES[randomMonument.continent.toLowerCase()]}</span>
 
-            <h1 className="hero-title">
-              Witness the Majesty of
-              <br />
-              the {randomMonument.name}.
-            </h1>
+            <h1 className="hero-title">{randomMonument.seo.metaDescription.split(',')[0]}.</h1>
 
             <div className="hero-action">
-              <Button variant="btn-solid" text="Begin Journey" onClick={handleBeginJourney} />
+              <Button variant="btn-solid" text="Begin Journey" onClick={() => handleBeginJourney(randomMonument)} />
             </div>
           </div>
         </div>
@@ -71,24 +79,24 @@ const Home = ({ randomMonument, getNextMonument }) => {
           {/* =========================================================
               MAIN CARD
           ========================================================= */}
-          {randomMonument && (
+          {getNextMonument(1) && (
             <div className="main-monument-card">
               <div className="card-image-wrapper">
-                <img src={randomMonument.images[0]} alt={randomMonument.name} />
+                <img src={getNextMonument(1).images[0]} alt={getNextMonument(1).name} />
               </div>
 
               <div className="card-body-content">
                 <span className="card-location">
-                  {randomMonument.city?.toUpperCase()}, {randomMonument.country?.toUpperCase()}
+                  {getNextMonument(1).city?.toUpperCase()}, {getNextMonument(1).country?.toUpperCase()}
                 </span>
 
-                <h3>{randomMonument.name}</h3>
+                <h3>{getNextMonument(1).name}</h3>
 
-                <p>{randomMonument.description}</p>
+                <p>{getNextMonument(1).description}</p>
 
-                <span className="card-date-badge">{randomMonument.year}</span>
+                <span className="card-date-badge">{getNextMonument(1).year}</span>
 
-                <button className="text-link-btn" onClick={() => handleExploreRecord(randomMonument)}>
+                <button className="text-link-btn" onClick={() => handleExploreRecord(getNextMonument(1))}>
                   EXPLORE RECORD →
                 </button>
               </div>
@@ -98,21 +106,21 @@ const Home = ({ randomMonument, getNextMonument }) => {
           {/* =========================================================
               SIDE CARD
           ========================================================= */}
-          {getNextMonument(1) && (
+          {getNextMonument(2) && (
             <div className="side-discovery-card">
               <span className="discovery-label-heading">DISCOVERY OF THE WEEK</span>
 
               <div className="side-card-inner">
                 <div className="side-image-wrapper">
-                  <img src={getNextMonument(1).images[1]} alt={getNextMonument(1).name} />
+                  <img src={getNextMonument(2).images[1]} alt={getNextMonument(2).name} />
                 </div>
 
                 <div className="side-card-body">
-                  <h3>{getNextMonument(1).name}</h3>
+                  <h3>{getNextMonument(2).name}</h3>
 
-                  <p>{getNextMonument(1).description}</p>
+                  <p>{getNextMonument(2).description}</p>
 
-                  <button className="text-link-btn" onClick={() => handleExploreRecord(getNextMonument(1))}>
+                  <button className="text-link-btn" onClick={() => handleExploreRecord(getNextMonument(2))}>
                     EXPLORE RECORD →
                   </button>
                 </div>
@@ -130,8 +138,8 @@ const Home = ({ randomMonument, getNextMonument }) => {
           <div className="exhibition-image-side">
             <img
               // src="https://tse3.mm.bing.net/th/id/OIP.vu3Xj7XVKFuWPRtrbYvc4QHaGW?rs=1&pid=ImgDetMain&o=7&rm=3"
-              src={getNextMonument(2).images[0]}
-              alt="The Echoes of Petra"
+              src={getNextMonument(3).images[0]}
+              alt={getNextMonument(3).name}
             />
           </div>
 
@@ -141,20 +149,20 @@ const Home = ({ randomMonument, getNextMonument }) => {
             <h2>
               {/* The Echoes of Petra:
               <br />A City Carved from Time */}
-              {getNextMonument(2).name}
+              {getNextMonument(3).name}
               {/* <br /> */}
               {/* {getNextMonument(2).shortDescription} */}
             </h2>
 
-            <p className="exhibition-intro">{getNextMonument(2).shortDescription}</p>
+            <p className="exhibition-intro">{getNextMonument(3).shortDescription}</p>
 
-            <p className="exhibition-details">{getNextMonument(2).seo.metaDescription}</p>
+            <p className="exhibition-details">{getNextMonument(3).seo.metaDescription}</p>
 
             <div className="exhibition-action">
               <Button
                 variant="btn-solid"
                 text="READ FEATURED CHAPTER"
-                onClick={() => handleReadChapter(getNextMonument(2).id)}
+                onClick={() => handleReadChapter(getNextMonument(3).id)}
               />
             </div>
           </div>
@@ -177,16 +185,12 @@ const Home = ({ randomMonument, getNextMonument }) => {
                 <div className="timeline-left">
                   {index % 2 === 0 ? (
                     <>
-                      <span className="node-year">{monument.year}</span>
+                      {/* <span className="node-year">{monument.year}</span> */}
 
-                      <CustomNavLink to={`/monument/${monument.id}`}>
-                        <h4>{monument.name}</h4>
-                      </CustomNavLink>
+                      <CustomNavLinkWithH4 monument={monument} />
                     </>
                   ) : (
-                    <CustomNavLink to={`/monument/${monument.id}`}>
-                      <p>{monument.shortDescription}</p>
-                    </CustomNavLink>
+                    <CustomNavlinkWithP monument={monument} />
                   )}
                 </div>
 
@@ -198,16 +202,12 @@ const Home = ({ randomMonument, getNextMonument }) => {
                 {/* RIGHT SIDE */}
                 <div className="timeline-right">
                   {index % 2 === 0 ? (
-                    <CustomNavLink to={`/monument/${monument.id}`}>
-                      <p>{monument.shortDescription}</p>
-                    </CustomNavLink>
+                    <CustomNavlinkWithP monument={monument} />
                   ) : (
                     <>
                       <span className="node-year">{monument.year}</span>
 
-                      <CustomNavLink to={`/monument/${monument.id}`}>
-                        <h4>{monument.name}</h4>
-                      </CustomNavLink>
+                      <CustomNavLinkWithH4 monument={monument} />
                     </>
                   )}
                 </div>

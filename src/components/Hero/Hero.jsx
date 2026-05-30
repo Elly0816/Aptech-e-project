@@ -1,13 +1,12 @@
-import "./Hero.css";
+import './Hero.css';
 
-
-const Hero = ({ name, country, city, images, shortDescription}) => {
+const Hero = ({ name, country, city, images, shortDescription }) => {
   return (
     <>
       <div
         className="container"
-       style={{
-    backgroundImage: `
+        style={{
+          backgroundImage: `
     linear-gradient(
       rgba(30, 80, 180, 0.35),
       rgba(30, 80, 180, 0.35)
@@ -15,10 +14,10 @@ const Hero = ({ name, country, city, images, shortDescription}) => {
     url(${images[4]})
     `,
 
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-}}
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
       >
         <div className="h4s">
           <h4 className="abc">{country}</h4>
