@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router';
 import './Header.css';
+import { useDimensions } from '../../hooks/useDimensions';
 
 const navItems = [
   'Explore',
@@ -13,6 +14,7 @@ const navItems = [
 
 const Header = () => {
   // const number = useMonumentNumber();
+  const { isMobile } = useDimensions();
   const { pathname } = useLocation();
   const [activeTab, setActiveTab] = useState(
     pathname === '/'
@@ -23,7 +25,7 @@ const Header = () => {
   );
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isMobile ? 'navbar-mobile' : ''}`}>
       <div className="navbar-container">
         {/* Left: Brand Name */}
         <div className="navbar-logo">Global Heritage</div>

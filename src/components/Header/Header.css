@@ -4,6 +4,13 @@
   border-bottom: 1px solid var(--border);
   background: #fff; /* Picked from your tokens to match that warm cream tint */
   box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-mobile {
+  position: relative;
 }
 
 .navbar-container {
