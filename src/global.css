@@ -41,7 +41,7 @@
   --text-inverse: #ffffff;
 
   --text-grey: var(--color-header-nav-text);
-  --text-dark: var(var(--color-header-nav-text-active));
+  --text-dark: var(--color-header-nav-text-active);
 
   /* Brand / Actions */
   --color-primary: var(--color-primary-500);
