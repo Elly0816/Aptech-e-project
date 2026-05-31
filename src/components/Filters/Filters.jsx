@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Filters.css';
+import { useDimensions } from '../../hooks/useDimensions';
 
 const buckets = {
   era: [
@@ -53,14 +54,16 @@ const buckets = {
   ],
 };
 
-function Filters({
+const Filters = ({
   filters = [],
   addToFilters = () => {},
   removeFromFilters = () => {},
   activeFilters: activeFiltersProp, // if parent supplies this, component is controlled
-}) {
+}) => {
   const isControlled = Array.isArray(activeFiltersProp);
   const [localActive, setLocalActive] = useState([]);
+
+  const { isMobile } = useDimensions();
 
   // activeFilters used for rendering (controlled or local)
   const activeFilters = isControlled ? activeFiltersProp : localActive;
@@ -157,10 +160,8 @@ function Filters({
   };
 
   return (
-    <div className="filters">
+    <div className={`filters ${isMobile ? 'filters-mobile' : ''}`}>
       <h2>FILTERS</h2>
-
-      
 
       {renderGroup('era', 'ERA')}
       {renderGroup('region', 'REGION')}
@@ -197,6 +198,6 @@ function Filters({
       </button>
     </div>
   );
-}
+};
 
 export default Filters;

@@ -24,15 +24,16 @@ export const Monument = () => {
       <div className="monument-container">
         <Hero
           key={monument.id + 'hero'}
+          id={monument.id}
           name={monument.name}
           country={monument.country}
           city={monument.city}
           images={monument.images}
           shortDescription={monument.shortDescription}
+          isWorldWonder={monument.isWorldWonder}
         />
 
         <Mon
-          // key={monument.id}
           name={monument.name}
           historicalSignificance={monument.historicalSignificance}
           fullDescription={monument.fullDescription}
@@ -43,6 +44,11 @@ export const Monument = () => {
           facts={monument.facts}
           visitingInfo={monument.visitingInfo}
           theme={monument.theme}
+          yearBuilt={monument.yearBuilt}
+          completedYear={monument.completedYear}
+          builtBy={monument.builtBy}
+          country={monument.country}
+          city={monument.city}
         />
       </div>
 

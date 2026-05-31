@@ -1,0 +1,114 @@
+/* ── Geographic Context Map Styling ── */
+.mon-geo-section {
+  margin-top: 32px;
+}
+
+.mon-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e6dec9;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.mon-section-header .mon-section-title {
+  border-bottom: none;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.mon-open-maps-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #b84a39;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+.mon-open-maps-link:hover {
+  opacity: 0.8;
+}
+
+.mon-geo-map {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #112233;
+  background-image:
+    radial-gradient(circle at center, rgba(201, 162, 39, 0.25) 1px, transparent 1px),
+    repeating-radial-gradient(
+      circle at center,
+      transparent,
+      transparent 15px,
+      rgba(201, 162, 39, 0.08) 15px,
+      rgba(201, 162, 39, 0.08) 16px
+    );
+  background-size: 100% 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.mon-geo-map-pin {
+  width: 44px;
+  height: 44px;
+  background: #08162e;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  margin-bottom: 24px;
+}
+
+.mon-geo-compass-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.mon-geo-coords-card {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+}
+
+.mon-geo-coords-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+  flex-shrink: 0;
+}
+
+.mon-geo-coords-sep {
+  color: #ccc;
+  font-weight: 300;
+}
+
+.mon-geo-coords-address {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
