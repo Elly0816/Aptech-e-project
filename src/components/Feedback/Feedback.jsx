@@ -55,7 +55,13 @@ const Feedback = ({ className }) => {
           <div className="form-group">
             <label>FULL NAME</label>
 
-            <input name="fullName" type="text" placeholder="e.g. Dr. Alistair Thorne" onChange={handleChange} />
+            <input
+              value={formData.fullName}
+              name="fullName"
+              type="text"
+              placeholder="e.g. Dr. Alistair Thorne"
+              onChange={handleChange}
+            />
           </div>
         )}
 
@@ -64,7 +70,13 @@ const Feedback = ({ className }) => {
           <div className="form-group">
             <label>EMAIL ADDRESS</label>
 
-            <input name="email" type="email" placeholder="heritage@example.com" onChange={handleChange} />
+            <input
+              value={formData.email}
+              name="email"
+              type="email"
+              placeholder="heritage@example.com"
+              onChange={handleChange}
+            />
           </div>
         )}
 
@@ -72,7 +84,7 @@ const Feedback = ({ className }) => {
         <div className="form-group">
           <label>FEEDBACK CATEGORY</label>
 
-          <select name="category" onChange={handleChange}>
+          <select value={formData.category} name="category" onChange={handleChange}>
             <option>Historical Accuracy</option>
             <option>Bug Report</option>
             <option>Suggestion</option>
@@ -85,6 +97,7 @@ const Feedback = ({ className }) => {
           <label>DETAILED CONTRIBUTION</label>
 
           <textarea
+            value={formData.contribution}
             name="contribution"
             rows="5"
             placeholder="Describe your findings or suggestions with scholarly detail..."
