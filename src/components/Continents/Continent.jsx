@@ -20,7 +20,7 @@ export const Continent = ({ representative, continents }) => {
   console.log('Chosen Continent: %s', JSON.stringify(chosenContinent));
   return (
     <>
-      <main className="continents-page">
+      <main className="continents-page wg-grid-item">
         <section className="continents-hero">
           <div className="hero-text">
             {isMobile ? (
@@ -56,7 +56,10 @@ export const Continent = ({ representative, continents }) => {
           )}
         </section>
 
-        <section className={`continents-grid ${isMobile && 'continents-grid-mobile'}`} aria-label="Continents">
+        <section
+          className={`continents-grid ${isMobile && 'continents-grid-mobile'} wg-grid-item`}
+          aria-label="Continents"
+        >
           {continents.map((c) => (
             <ContinentCard key={c.name} name={c.name} image={c.image} onOpen={(name) => setSelectedContinent(name)} />
           ))}

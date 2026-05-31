@@ -279,7 +279,7 @@
   /* Align directories row layout across the bottom of mobile screen */
   .footer-links-section {
     width: 100%;
-    justify-content: 间-between; /* Spreads menus outward evenly over narrow device spaces */
+    justify-content: space-between; /* Spreads menus outward evenly over narrow device spaces */
     gap: 20px;
   }
 
@@ -308,6 +308,13 @@
     justify-content: space-between;
   }
 
+  /* Allow headings and links to wrap on small screens so they don't force overflow */
+  .footer-column h4,
+  .footer-column ul li a {
+    white-space: normal;
+    word-break: break-word;
+  }
+
   /* Fixed Floating Dock Layout */
   .mobile-bottom-nav {
     display: flex;
@@ -323,6 +330,19 @@
     z-index: 1000;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
     padding-bottom: env(safe-area-inset-bottom); /* Safety margin for modern phone screens */
+  }
+
+  /* Ensure nav items can shrink to fit the viewport and truncate labels if necessary */
+  .mobile-nav-item {
+    min-width: 0;
+  }
+
+  .mobile-nav-item span {
+    display: block;
+    max-width: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .mobile-nav-item {

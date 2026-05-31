@@ -4,6 +4,12 @@
   border-bottom: 1px solid var(--border-default);
   display: flex;
   margin-bottom: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 28px;
+  padding: 0 12px;
+  scroll-behavior: smooth;
+  white-space: nowrap;
 }
 
 .gallery-filter__tab {
@@ -18,8 +24,9 @@
   font-weight: 400;
   padding: 8px 0 10px;
   border-bottom: 1.5px solid transparent;
-  margin-right: 28px;
   transition: all 0.25s;
+  flex: 0 0 auto;
+  min-width: 0;
 }
 
 .gallery-filter__tab:hover {

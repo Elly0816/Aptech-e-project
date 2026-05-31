@@ -35,7 +35,7 @@ export const Saved = () => {
   return (
     <>
       <Header />
-      <div className='saved-container'>
+      <div className="saved-container">
         <div className="hero">
           <h1>Your Collection</h1>
           <p>
@@ -53,7 +53,7 @@ export const Saved = () => {
           />
 
           <div className="content">
-            <div className="cards">
+            <div className="cards wg-grid-item">
               {paged.map((item) => (
                 <Card
                   key={item.id}
@@ -73,7 +73,7 @@ export const Saved = () => {
               onPageChange={setPage}
             />
           </div>
-        </div> 
+        </div>
       </div>
       <Footer />
     </>

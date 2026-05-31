@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   animation: wg-lb-in 0.25s ease;
+  overflow-x: hidden; /* prevent child transforms or padding from causing page-level horizontal scroll */
 }
 
 /* ── Inner content area ──
@@ -16,13 +17,36 @@
    justify-content center, align-items center        */
 .lightbox__inner {
   display: grid;
-  grid-template-columns: 1fr;   /* single column → items stack vertically */
+  grid-template-columns: 1fr; /* single column → items stack vertically */
   justify-content: center;
   align-items: center;
-  justify-items: center;        /* center each child horizontally */
+  justify-items: center; /* center each child horizontally */
   max-width: 90vw;
   padding: 20px;
+  box-sizing: border-box; /* include padding in max-width so the element never exceeds viewport */
   animation: wg-img-in 0.3s ease;
+}
+
+/* Slider wrapper and track for swipe gestures */
+.lightbox__slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  touch-action: pan-y; /* allow vertical scrolling but handle horizontal swipes in JS */
+  -webkit-overflow-scrolling: touch;
+}
+
+.lightbox__slider {
+  display: flex;
+  will-change: transform;
+}
+
+.lightbox__slide {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .lightbox__figure {
@@ -31,9 +55,16 @@
 
 .lightbox__img {
   display: block;
-  max-width: 75vw;
+  width: 100%;
+  max-width: 100%;
   max-height: 62vh;
   object-fit: contain;
+  will-change: transform;
+  transition: transform 300ms ease;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .lightbox__meta {
@@ -71,7 +102,7 @@
   font-size: 12px;
   opacity: 0.55;
   margin-top: 14px;
-  max-width: 460px;
+  /* max-width: 460px; */
   line-height: 1.85;
   font-weight: 300;
 }
@@ -107,15 +138,20 @@
   justify-content: center;
   cursor: pointer;
   transition: background 0.2s;
-  backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(4px); */
+  --webkit-backdrop-filter: blur(4px);
 }
 
 .lightbox__nav:hover {
   background: rgba(255, 255, 255, 0.16);
 }
 
-.lightbox__nav--prev { left: 16px;  }
-.lightbox__nav--next { right: 16px; }
+.lightbox__nav--prev {
+  left: 16px;
+}
+.lightbox__nav--next {
+  right: 16px;
+}
 
 /* ── Close button ── */
 .lightbox__close {
@@ -141,11 +177,49 @@
 
 /* ── Mobile adjustments ── */
 @media (max-width: 700px) {
-  .lightbox__img  { max-width: 92vw; max-height: 52vh; }
-  .lightbox__nav--prev { left:  6px; }
-  .lightbox__nav--next { right: 6px; }
+  .lightbox__img {
+    max-width: 96vw;
+    max-height: 56vh;
+  }
+  .lightbox__nav--prev {
+    left: 6px;
+  }
+  .lightbox__nav--next {
+    right: 6px;
+  }
+}
+
+/* removed old two-column layout to avoid conflicting rules */
+/* On wide screens we keep the image and metadata stacked vertically
+   (image first, then descriptive text) while centering the content. */
+@media (min-width: 980px) {
+  .lightbox__inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    padding: 28px;
+  }
+
+  .lightbox__figure {
+    display: block;
+    width: 100%;
+  }
+
+  .lightbox__img {
+    max-width: 100%;
+    max-height: 80vh;
+  }
+
+  .lightbox__meta {
+    text-align: center;
+    margin-top: 8px;
+    max-width: 880px;
+  }
 }
 
 @media (max-width: 480px) {
-  .lightbox__desc { display: none; }
+  .lightbox__desc {
+    display: none;
+  }
 }

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router';
-import { useMonumentNumber } from '../../hooks/useRandomMonument';
 import './Header.css';
 
 const navItems = [
@@ -13,14 +12,14 @@ const navItems = [
 ];
 
 const Header = () => {
-  const number = useMonumentNumber();
+  // const number = useMonumentNumber();
   const { pathname } = useLocation();
   const [activeTab, setActiveTab] = useState(
     pathname === '/'
       ? 'Explore'
-      : pathname.toLowerCase().includes('monument')
-        ? 'Monument'
-        : pathname.charAt(0).toUpperCase() + pathname.slice(1)
+      : // : pathname.toLowerCase().includes('monument')
+        //   ? 'Monument'
+        pathname.charAt(0).toUpperCase() + pathname.slice(1)
   );
 
   return (
@@ -34,7 +33,12 @@ const Header = () => {
           {navItems.map((item, index) => (
             <NavLink
               key={index}
-              to={item === 'Explore' ? '/' : item === 'Monument' ? `/monument/${number}` : `/${item.toLowerCase()}`}
+              to={
+                item === 'Explore'
+                  ? '/'
+                  : // : item === 'Monument' ? `/monument/${number}`
+                    `/${item.toLowerCase()}`
+              }
               className={`nav-item ${activeTab === item ? 'active' : ''}`}
               onClick={() => setActiveTab(item)}
               style={() => ({ textDecoration: 'none', fontWeight: activeTab === item ? 'bold' : 600 })}

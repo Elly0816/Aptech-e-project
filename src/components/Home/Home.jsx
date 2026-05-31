@@ -72,7 +72,7 @@ const Home = ({ randomMonument, getNextMonument }) => {
   };
 
   return (
-    <div className="home-page">
+    <div className="home-page wg-grid-item">
       <LiveTicker />
 
       {/* =========================================================
