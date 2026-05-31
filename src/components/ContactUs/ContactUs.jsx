@@ -112,7 +112,11 @@ const ContactUs = ({ className }) => {
         {/* <button type="submit" className="submit-btn">
           SEND MESSAGE
         </button> */}
-        <Button text={'SEND MESSAGE'} style={{ alignSelf: !isMobile ? 'flex-end' : 'stretch' }} />
+        <Button
+          text={'SEND MESSAGE'}
+          style={{ alignSelf: !isMobile ? 'flex-end' : 'stretch' }}
+          onClick={handleSubmit}
+        />
       </form>
     </div>
   );

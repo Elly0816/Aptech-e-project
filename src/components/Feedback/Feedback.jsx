@@ -1,9 +1,40 @@
+import { useState } from 'react';
 import { useDimensions } from '../../hooks/useDimensions';
 import Button from '../Button/Button';
 import './Feedback.css';
 
 const Feedback = ({ className }) => {
   const { isMobile } = useDimensions();
+
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    category: '',
+    contribution: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(formData);
+
+    alert('Feedback Sent Successfully!');
+
+    setFormData({
+      fullName: '',
+      email: '',
+      category: '',
+      contribution: '',
+    });
+  };
+
   return (
     // <div className={`feedback-card ${className}`}>
     <div className={`${className}`}>
@@ -24,7 +55,7 @@ const Feedback = ({ className }) => {
           <div className="form-group">
             <label>FULL NAME</label>
 
-            <input type="text" placeholder="e.g. Dr. Alistair Thorne" />
+            <input name="fullName" type="text" placeholder="e.g. Dr. Alistair Thorne" onChange={handleChange} />
           </div>
         )}
 
@@ -33,7 +64,7 @@ const Feedback = ({ className }) => {
           <div className="form-group">
             <label>EMAIL ADDRESS</label>
 
-            <input type="email" placeholder="heritage@example.com" />
+            <input name="email" type="email" placeholder="heritage@example.com" onChange={handleChange} />
           </div>
         )}
 
@@ -41,7 +72,7 @@ const Feedback = ({ className }) => {
         <div className="form-group">
           <label>FEEDBACK CATEGORY</label>
 
-          <select>
+          <select name="category" onChange={handleChange}>
             <option>Historical Accuracy</option>
             <option>Bug Report</option>
             <option>Suggestion</option>
@@ -53,14 +84,23 @@ const Feedback = ({ className }) => {
         <div className="form-group">
           <label>DETAILED CONTRIBUTION</label>
 
-          <textarea rows="5" placeholder="Describe your findings or suggestions with scholarly detail..."></textarea>
+          <textarea
+            name="contribution"
+            rows="5"
+            placeholder="Describe your findings or suggestions with scholarly detail..."
+            onChange={handleChange}
+          ></textarea>
         </div>
 
         {/* Button */}
         {/* <button type="submit" className="submit-btn">
           SUBMIT FEEDBACK
         </button> */}
-        <Button text={'SUBMIT FEEDBACK'} style={{ alignSelf: !isMobile ? 'flex-end' : 'stretch' }} />
+        <Button
+          text={'SUBMIT FEEDBACK'}
+          style={{ alignSelf: !isMobile ? 'flex-end' : 'stretch' }}
+          onClick={handleSubmit}
+        />
       </form>
     </div>
   );

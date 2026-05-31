@@ -5,7 +5,7 @@ const Button = ({ text, variant, onClick, style, className }) => {
     <button
       style={{ ...style }}
       className={`custom-btn ${variant ? variant : ''} ${className ? className : ''}`}
-      onClick={onClick}
+      onClick={onClick ?? onClick}
     >
       {text}
     </button>
