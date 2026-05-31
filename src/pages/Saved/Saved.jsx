@@ -51,12 +51,9 @@ export const Saved = () => {
     <>
       <Header />
       <div className="saved-container">
-        <div className="hero">
+        <div className={` ${isMobile ? 'hero-mobile' : 'hero'}`}>
           <h1>Your Collection</h1>
-          <p>
-            A definitive digital repository encompassing millennia of human achievement. Explore high-fidelity records,
-            architectural documentation, and historical narratives from the world's most significant cultural sites.
-          </p>
+          <p>Preserving personal discoveries from across the globe, curated by you for future exploration.</p>
         </div>
 
         <div className="middle">

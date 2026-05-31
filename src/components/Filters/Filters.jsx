@@ -141,7 +141,12 @@ const Filters = ({
                   checked={activeFilters.includes(item)}
                   onChange={() => toggleFilter(item)}
                 />
-                <span className="filter-text">{item}</span>
+                <span className="filter-text">
+                  {item
+                    .split(' ')
+                    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(' ')}
+                </span>
               </label>
             );
           })}
@@ -186,7 +191,12 @@ const Filters = ({
                     checked={activeFilters.includes(item)}
                     onChange={() => toggleFilter(item)}
                   />
-                  <span className="filter-text">{item}</span>
+                  <span className="filter-text">
+                    {item
+                      .split(' ')
+                      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                      .join(' ')}
+                  </span>
                 </label>
               );
             })}
