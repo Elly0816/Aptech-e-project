@@ -1,4 +1,4 @@
-import ContactUs from '../../components/Contactus/ContactUs';
+import ContactUs from '../../components/ContactUs/ContactUs';
 import Feedback from '../../components/Feedback/Feedback';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
