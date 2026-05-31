@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
-import './Ticker.css'; // Just use a single dot '.' because they are in the same folder
+import './Ticker.css';
+import { VisitCounter } from '../VisitCounter/VisitCounter';
+import { useDimensions } from '../../hooks/useDimensions';
+
 // A rich list of global cities grouped into batches of 3
 const CITY_GROUPS = [
   [
@@ -27,8 +30,8 @@ const CITY_GROUPS = [
 const LiveTicker = () => {
   const [groupIndex, setGroupIndex] = useState(0);
   const [times, setTimes] = useState([]);
-  const [visitors, setVisitors] = useState(12842);
-  const [fade, setFade] = useState(true); // Handles smooth transition blending
+  const [fade, setFade] = useState(true);
+  const { isMobile } = useDimensions();
 
   // Effect 1: Handle time calculation ticks every second
   useEffect(() => {
@@ -63,7 +66,7 @@ const LiveTicker = () => {
     return () => clearInterval(interval);
   }, [groupIndex]);
 
-  // Effect 2: Cycle to the next country group every 7 seconds + visitor simulation
+  // Effect 2: Cycle to the next country group every 7 seconds
   useEffect(() => {
     const groupInterval = setInterval(() => {
       setFade(false); // Trigger fade-out animation
@@ -74,28 +77,34 @@ const LiveTicker = () => {
       }, 500); // Wait for fade-out to finish before changing data
     }, 7000);
 
-    // Organic visitor count simulation
-    const visitorInterval = setInterval(() => {
-      setVisitors((prev) => {
-        const delta = Math.floor(Math.random() * 7) - 3;
-        return Math.min(Math.max(prev + delta, 12500), 13200);
-      });
-    }, 4000);
-
     return () => {
       clearInterval(groupInterval);
-      clearInterval(visitorInterval);
     };
   }, []);
 
   return (
     <div className="live-ticker-bar">
-      <div className="ticker-wrapper">
+      <div className={`ticker-wrapper ${isMobile ? 'ticker-wrapper-mobile' : ''}`}>
         {/* Left Side: Dynamic Rotating Clocks Grid */}
-        <div className={`ticker-time-section ${fade ? 'fade-in' : 'fade-out'}`}>
+        <div
+          className={`ticker-time-section ${fade ? 'fade-in' : 'fade-out'}`}
+          style={{
+            alignItems: isMobile ? 'flex-start' : 'center',
+            flexDirection: isMobile ? 'column' : 'row',
+            justifyContent: isMobile ? 'flex-start' : 'center',
+          }}
+        >
           {times && times.length > 0 ? (
             times.map((item, index) => (
-              <div key={item.name} style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <div
+                key={item.name}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '16px',
+                  fontSize: isMobile ? '1px' : '11px',
+                }}
+              >
                 <div className="ticker-item">
                   <span className="location">{item.name}:</span>{' '}
                   <span className="time-val">
@@ -113,11 +122,7 @@ const LiveTicker = () => {
         </div>
 
         {/* Right Side: Concurrent Counts Status Indicator */}
-        <div className="ticker-status-section">
-          <span className="live-pulse-dot"></span>
-          <span className="status-label">GLOBAL EXPLORERS ONLINE:</span>
-          <span className="status-count">{visitors.toLocaleString()}</span>
-        </div>
+        <VisitCounter />
       </div>
     </div>
   );

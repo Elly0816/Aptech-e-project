@@ -9,20 +9,23 @@ import { Gallery } from './pages/Gallery/Gallery';
 import { HomePage } from './pages/Homepage/HomePage';
 import { Monument } from './pages/Monument/Monument';
 import { Saved } from './pages/Saved/Saved';
+import { VisitProvider } from './context/VisitCountContext';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/continents" element={<Continents />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/saved" element={<Saved />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/monument/:id" element={<Monument />} />
-        <Route path="/hello" element={<div>Hello World</div>} />
-      </Routes>
-    </BrowserRouter>
+    <VisitProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/continents" element={<Continents />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/saved" element={<Saved />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/monument/:id" element={<Monument />} />
+          <Route path="/hello" element={<div>Hello World</div>} />
+        </Routes>
+      </BrowserRouter>
+    </VisitProvider>
   );
 };
 

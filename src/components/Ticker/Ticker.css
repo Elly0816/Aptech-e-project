@@ -56,14 +56,14 @@
   user-select: none;
 }
 
-.ticker-status-section {
+/* .ticker-status-section {
   display: flex;
   align-items: center;
   gap: 8px;
   white-space: nowrap;
-}
+} */
 
-/* Pulsing Crimson Beacon Dot */
+/* Pulsing Crimson Beacon Dot
 .live-pulse-dot {
   width: 6px;
   height: 6px;
@@ -73,15 +73,15 @@
   box-shadow: 0 0 0 0 rgba(163, 76, 72, 0.7);
   animation: pulse-glow 2s infinite;
   flex-shrink: 0;
-}
+} */
 
-.status-label {
+/* .status-label {
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: #519bbd;
-}
+} */
 
 .status-count {
   font-family: var(--font-body);
@@ -161,9 +161,9 @@
     display: inline-block;
   }
 
-  .ticker-status-section {
+  /* .ticker-status-section {
     gap: 4px !important;
-  }
+  } */
 }
 
 @media (max-width: 480px) {
@@ -171,7 +171,14 @@
     padding: 0 16px;
   }
   /* Hides the 'GLOBAL EXPLORERS ONLINE' text to keep small devices uncluttered */
-  .status-label {
+  /* .status-label {
     display: none !important;
-  }
+  } */
+}
+
+.ticker-wrapper-mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
