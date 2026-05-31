@@ -10,7 +10,9 @@ const getRandomNumber = () => {
 
 export const useMonuments = () => {
   const [activeFilters, setActiveFilters] = useState([]);
-  //   const [randomMonument, setRandomMonument] = useState();
+  const [randomMonument, setRandomMonument] = useState(
+    monuments[Math.min(Math.floor(getRandomNumber() * monuments.length + 1), monuments.length)]
+  );
 
   const data = useMemo(() => {
     if (activeFilters.length === 0) return monuments;
@@ -30,10 +32,10 @@ export const useMonuments = () => {
   //     setRandomMonument(monuments[randomNumber])
   // }, []);
 
-  const randomMonument = useMemo(() => {
-    const randomNumber = Math.min(getRandomNumber() * monuments.length + 1, monuments.length);
-    return monuments[randomNumber];
-  }, []);
+  // const randomMonument = useMemo(() => {
+  //   const randomNumber = Math.min(getRandomNumber() * monuments.length + 1, monuments.length);
+  //   return monuments[randomNumber];
+  // });
 
   return {
     monuments: data,

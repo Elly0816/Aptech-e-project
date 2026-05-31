@@ -1,5 +1,6 @@
 /* colors */
 :root {
+  box-sizing: border-box;
   /* ========================================
    BASE PALETTE TOKENS
    Raw brand colors — NEVER use directly in components

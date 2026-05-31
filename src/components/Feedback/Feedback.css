@@ -36,12 +36,7 @@ body {
 
   padding: 60px 20px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #f8f8f8 0%,
-      #ececec 100%
-    );
+  background: linear-gradient(180deg, #f8f8f8 0%, #ececec 100%);
 }
 
 /* =========================
@@ -55,47 +50,29 @@ body {
   padding: 55px;
 }
 
-
 .feedback-card:hover {
   transform: translateY(-3px);
 }
-
-.insight-title {
-  font-family:'Playfair Display', serif; ;
-  font-optical-sizing: auto;
-  font-size: 45px;
-  font-weight: 700px;
-  font-style: bold;
-  font-variation-settings:"wdth" 100;
-} 
-
-.feedbackinsight-subtitle {
- color: #777;
-  font-size: 1rem;
-  margin-bottom: 40px;
-}
-
-
 
 /* =========================
    TITLE
 ========================= */
 
-.feedback-title {
-  font-size:1rem ;
+/* .feedback-title {
+  font-size: 1rem;
   font-weight: 10px;
   color: #6b5200;
   margin-bottom: 30px;
   letter-spacing: 2px;
   line-height: 1.1;
-}
+} */
 
 /* =========================
    FORM
 ========================= */
 
 .feedback-form {
-  display: block ;
+  display: block;
   flex-direction: column;
 
   gap: 38px;

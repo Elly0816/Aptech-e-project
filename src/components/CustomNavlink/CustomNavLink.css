@@ -1,5 +1,6 @@
 .navLink h4:hover,
 .navLink p:hover,
+.navLink h2:hover,
 .navLink h3:hover {
   text-decoration: underline;
 }

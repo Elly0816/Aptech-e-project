@@ -140,7 +140,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className={!isMobile && `footer`}>
+    <footer className={!isMobile ? `footer` : ''}>
       {!isMobile && (
         <div className="footer-container">
           {/* Top Section: Split between description and links */}

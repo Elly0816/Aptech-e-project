@@ -31,6 +31,14 @@ export const CustomNavLinkWithH3 = ({ monument }) => {
   );
 };
 
+export const CustomNavLinkWithH2 = ({ monument }) => {
+  return (
+    <CustomNavLink to={`/monument/${monument.id}`}>
+      <h2 className="spotlight-title">{monument.name}</h2>
+    </CustomNavLink>
+  );
+};
+
 export const CustomNavlinkWithP = ({ monument }) => {
   return (
     <CustomNavLink to={`/monument/${monument.id}`}>

@@ -3,10 +3,17 @@ import Feedback from '../../components/Feedback/Feedback';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import { useDimensions } from '../../hooks/useDimensions';
+import { useMonuments } from '../../hooks/useMonuments';
+import { CustomNavLinkWithH2 } from '../../components/CustomNavlink/CustomNavLink';
 import './About.css';
+
+const randomNumber = Math.random();
 
 export const About = () => {
   const { isMobile } = useDimensions();
+
+  const { randomMonument } = useMonuments();
+  // console.log(randomMonument);
   return (
     <>
       <Header />
@@ -22,24 +29,42 @@ export const About = () => {
             <span className="author">— MARCUS GARVEY</span>
           </div>
         </div>
-        <div className="contact-feedback-container">
+        {isMobile && (
+          <div className="quote-line-mobile">
+            <h3>SCHOLARLY EXCELLENCE</h3>
+            <p>
+              Your insights help us refine the digital tapestry of human history. Every contribution is reviewed by our
+              archival team to ensure the hightst standards of historical accuracy and digital preservation.
+            </p>
+          </div>
+        )}
+        <div className={`${isMobile ? 'contact-feedback-container-mobile' : 'contact-feedback-container'}`}>
           {isMobile ? (
             <>
-              <ContactUs />
-              <Feedback />
+              <ContactUs className={`contact-feedback-card-mobile`} />
+              <Feedback className={`contact-feedback-card-mobile`} />
             </>
           ) : (
             <>
-              <Feedback />
-              <ContactUs />
+              <Feedback className={`contact-feedback-card`} />
+              <ContactUs className={`contact-feedback-card`} />
             </>
           )}
         </div>
-        <div className="spotlight-section">
-          <img src="./assets/OIP.webp" alt="spotlight-image" className="spotlight-image" />
+        <div
+          className="spotlight-section"
+          style={{
+            background: `url(${randomMonument.images[Math.floor(randomNumber * randomMonument.images.length)]}) center/cover no-repeat`,
+          }}
+        >
+          {/* <img
+            src={randomMonument.images[Math.floor(randomNumber * randomMonument.images.length)]}
+            alt={randomMonument.name}
+            className="spotlight-image"
+          /> */}
           <div className="spotlight-overlay">
             <span className="spotlight-label">CURRENT SPOTLIGHT</span>
-            <h2 className="spotlight-title">The Great Library at Ephesus</h2>
+            <CustomNavLinkWithH2 to={`/monuments/${randomMonument.id}`} monument={randomMonument} />
           </div>
         </div>
       </section>
