@@ -1,6 +1,7 @@
 /* src/components/GalleryCard/GalleryCard.jsx */
 import { useLocation, useNavigate } from 'react-router';
 import './GalleryCard.css';
+import { useDimensions } from '../../hooks/useDimensions';
 
 function getLabel(item) {
   if (item.isWorldWonder) return 'World Wonder';
@@ -14,6 +15,7 @@ const randomNumber = Math.random();
 export default function GalleryCard({ item, onOpen }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const { isMobile } = useDimensions();
 
   const inGallery = pathname.toLocaleLowerCase().includes('gallery');
 
@@ -38,7 +40,7 @@ export default function GalleryCard({ item, onOpen }) {
           <h3 className="gallery-card__name">{item.name}</h3>
           {inGallery && (
             <button
-              className="gallery-card__btn"
+              className={`gallery-card__btn ${isMobile ? 'gallery_card_btn_mobile' : ''}`}
               onClick={(e) => {
                 e.stopPropagation();
                 // onOpen();

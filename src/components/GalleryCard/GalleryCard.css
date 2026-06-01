@@ -99,6 +99,10 @@
     border-color 0.2s;
 }
 
+.gallery_card_btn_mobile {
+  opacity: 1;
+}
+
 .gallery-card:hover .gallery-card__btn {
   opacity: 1;
   transform: translateY(0);
