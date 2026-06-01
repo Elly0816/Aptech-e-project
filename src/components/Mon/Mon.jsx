@@ -1,6 +1,7 @@
 import { useDimensions } from '../../hooks/useDimensions';
 import './Mon.css';
 import Geo from '../Geo/Geo';
+import Button from '../Button/Button';
 
 const randNum = Math.random();
 
@@ -118,6 +119,12 @@ export const Mon = ({
     return yearBuilt || 'N/A';
   };
 
+  const handleBookOfficialTour = () => {
+    const term = `Book tour of ${name} in ${city}`;
+    const url = `https://www.google.com/search?q=${encodeURIComponent(term)}`;
+    window.open(url, '_blank');
+  };
+
   if (isMobile) {
     return (
       <div className="mon-content is-mobile-view">
@@ -170,7 +177,8 @@ export const Mon = ({
               </div>
             </div>
 
-            <button className="mon-visitor-card__btn">BOOK OFFICIAL TOUR</button>
+            {/* <button className="mon-visitor-card__btn">BOOK OFFICIAL TOUR</button> */}
+            <Button className={`mon-visitor-card__btn`} text={`BOOK OFFICIAL TOUR`} onClick={handleBookOfficialTour} />
           </div>
         </section>
 
@@ -304,7 +312,7 @@ export const Mon = ({
             <p className="mon-tour-description">
               Experience the arena floor and underground chambers with expert historians.
             </p>
-            <button className="mon-tour-button">Reserve Your Access</button>
+            <Button className={`mon-tour-button`} text={`BOOK OFFICIAL TOUR`} onClick={handleBookOfficialTour} />
             <small className="mon-tour-partner">Official Partner of Roma Capitale</small>
           </div>
         </aside>
