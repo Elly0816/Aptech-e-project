@@ -47,7 +47,7 @@ export default function GalleryCard({ item, onOpen }) {
                 navigate(`/monument/${item.id}`);
               }}
             >
-              View Chapter
+              View Monument
             </button>
           )}
         </figcaption>
